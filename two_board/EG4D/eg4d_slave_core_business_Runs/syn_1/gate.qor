@@ -1,0 +1,89 @@
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |        -4184                |
+|     Setup TNS             |       -34120                |
+|     Num of violated S-EP  |           15                |
+|     Hold WNS              |          471                |
+|     Hold TNS              |            0                |
+|     Num of violated H-EP  |            0                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |         2430                |
+|     #luts                 |         3663                |
+|     #lut1                 |           26                |
+|     #lut1(~A)             |           26                |
+|     #slices               |         1015                |
+|     slices percentage     |       10.36%                |
+|     #RAMs                 |            4                |
+|     #DSPs                 |            0                |
+|     #f7mux                |        0.00%                |
+|     #MACROs               |          238                |
+|     #insts in MACRO       |         1015                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |          346                |
+|     #keep_hier            |            0                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |            0                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |           16                |
+-----------------------------------------------------------
+| Top 10% datanet fanout#   |        65.48                |
+| dff(single fanout)->dff   |           95                |
+| dff(single fanout)->dram  |            0                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     eg4d_eth_txc          |            5                |
+|     Total                 |            5                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Over-quota Path Details
+------------------------------------------------------------------------------------------------------------------
+     Clock      |  Index  |  Budget(Period)  |  Level(Quota)  |  Cell Type List  |        Reason        |  Slack  
+------------------------------------------------------------------------------------------------------------------
+  eg4d_eth_txc  |    1    |   -2684(8000)    |     0(-2)      |       PAD        |  large launch delay  |  -4184  
+                |    2    |   -2684(8000)    |     0(-2)      |       PAD        |  large launch delay  |  -4184  
+                |    3    |   -2684(8000)    |     0(-2)      |       PAD        |  large launch delay  |  -4184  
+                |    4    |   -2684(8000)    |     0(-2)      |       PAD        |  large launch delay  |  -4184  
+                |    5    |   -2684(8000)    |     0(-2)      |       PAD        |  large launch delay  |  -4184  
+------------------------------------------------------------------------------------------------------------------
+Note: Table only show top 5 paths for each clock group in default
+
+Logic Level Distribution
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Clock                      |  Period            |  0     |  1    |  2     |  3    |  4    |  5    |  6     |  7    |  8    |  9   |  10   |  11  |  12  |  13  |  14  |  15  |  16
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  eg4d_clk_25m               |  40.000ns (25MHz)  |  1777  |  253  |  1099  |  645  |  434  |  494  |  1004  |  303  |  214  |  27  |  168  |  54  |  40  |  5   |  13  |  8   |  5
+  eg4d_eth_rxc               |  8.000ns (125MHz)  |  0     |  0    |  0     |  0    |  0    |  0    |  0     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  eg4d_eth_txc               |  8.000ns (125MHz)  |  5     |  0    |  0     |  0    |  0    |  0    |  0     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  eg4d_mode_75m              |  13.333ns (75MHz)  |  0     |  0    |  0     |  0    |  0    |  0    |  0     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  eg4d_mode_75m_90           |  13.333ns (75MHz)  |  0     |  0    |  0     |  0    |  0    |  0    |  0     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  u_pll/pll_inst.clkc[0]     |  8.000ns (125MHz)  |  121   |  18   |  12    |  55   |  39   |  63   |  9     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  u_pll/pll_inst.clkc[1]     |  8.000ns (125MHz)  |  2     |  1    |  0     |  0    |  0    |  0    |  0     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  u_rx_pll/pll_inst.clkc[0]  |  8.000ns (125MHz)  |  0     |  0    |  0     |  0    |  0    |  0    |  0     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  u_rx_pll/pll_inst.clkc[1]  |  8.000ns (125MHz)  |  222   |  80   |  17    |  75   |  43   |  47   |  58    |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  Total                      |  NA                |  2127  |  352  |  1128  |  775  |  516  |  604  |  1071  |  303  |  214  |  27  |  168  |  54  |  40  |  5   |  13  |  8   |  5
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Hierarchical Rent Exponent Report
++-----------------------------------------------------------------------------+
+|Inst             |Model               |Rent     |Cell     |Pin     |Term     |
++-----------------------------------------------------------------------------+
+|top              |top_eg4d_slave      |0.18     |7883     |38326   |25       |
+|  u_telemetry_rx |ctl_telemetry_rx_16 |0.55     |1100     |3533    |146      |
+|  u_aud_player   |aud_wav_player_3    |0.43     |1723     |7861    |111      |
++-----------------------------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+

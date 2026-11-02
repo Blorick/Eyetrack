@@ -1,0 +1,14 @@
+{
+    "arch": "rv32",
+    "bspLocation": "D:/Project/Anlogic/push/Eyetrack/mcu/eyetrack_bsp",
+    "bspName": "eyetrack_bsp",
+    "chip": "ph1p35",
+    "languageType": "C",
+    "location": "D:/Project/Anlogic/push/Eyetrack/mcu/gimbal_servo",
+    "name": "gimbal_servo",
+    "os": "standalone",
+    "processor": "rpu",
+    "templateName": "EMPTY",
+    "toolVersion": "862c784 (2026-09-02-16:28)",
+    "type": "application"
+}

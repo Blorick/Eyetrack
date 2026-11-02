@@ -1,0 +1,833 @@
+============================================================
+   Tang Dynasty, V6.2.168116
+   Copyright (c) 2012-2025 Anlogic Inc.
+   Executable = D:/Program Files/Anlogic/TD_6.2.1_Engineer_6.2.168.116/bin/run.exe
+   Built at =   16:32:07 Jun 12 2025
+   Run by =     yangz
+   Run Date =   Sat Oct 31 00:21:38 2026
+
+   Run on =     MSI
+============================================================
+RUN-1002 : start command "import_device eagle_s20.db -package EG4D20EG176"
+RUN-1001 : Using default speed grade: NA
+ARC-1001 : Device Initialization.
+ARC-1001 : ----------------------------------------------------------------------
+ARC-1001 :            OPTION            |            IO            |   SETTING   
+ARC-1001 : ----------------------------------------------------------------------
+ARC-1001 :   cso_b/cclk/mosi/miso/dout  |  P140/P168/P166/P165/S5  |    gpio    
+ARC-1001 :             done             |           P10            |    gpio    
+ARC-1001 :           program_b          |           P134           |  dedicate  
+ARC-1001 :        tdi/tms/tck/tdo       |     P46/P44/P47/P43      |  dedicate  
+ARC-1001 : ----------------------------------------------------------------------
+ARC-1004 : Device setting, marked 5 dedicate IOs in total.
+RUN-1002 : start command "open_project eg4d_slave_core_business.prj"
+PRJ-7002 CRITICAL-WARNING: Load IPC file . error, the IP's generated file D doesn't exist.
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+HDL-1007 : analyze verilog file ../../al_ip/eg4d_eth_rx_pll.v
+HDL-1007 : undeclared symbol 'eg4d_eth_rx_pll_open0', assumed default net type 'wire' in ../../al_ip/eg4d_eth_rx_pll.v(79)
+HDL-1007 : undeclared symbol 'eg4d_eth_rx_pll_open8', assumed default net type 'wire' in ../../al_ip/eg4d_eth_rx_pll.v(85)
+HDL-1007 : undeclared symbol 'eg4d_eth_rx_pll_open7', assumed default net type 'wire' in ../../al_ip/eg4d_eth_rx_pll.v(85)
+HDL-1007 : undeclared symbol 'eg4d_eth_rx_pll_open6', assumed default net type 'wire' in ../../al_ip/eg4d_eth_rx_pll.v(85)
+HDL-1007 : undeclared symbol 'eg4d_eth_rx_pll_open5', assumed default net type 'wire' in ../../al_ip/eg4d_eth_rx_pll.v(85)
+HDL-1007 : undeclared symbol 'eg4d_eth_rx_pll_open4', assumed default net type 'wire' in ../../al_ip/eg4d_eth_rx_pll.v(85)
+HDL-1007 : undeclared symbol 'eg4d_eth_rx_pll_open3', assumed default net type 'wire' in ../../al_ip/eg4d_eth_rx_pll.v(85)
+HDL-1007 : undeclared symbol 'eg4d_eth_rx_pll_open2', assumed default net type 'wire' in ../../al_ip/eg4d_eth_rx_pll.v(85)
+HDL-1007 : undeclared symbol 'eg4d_eth_rx_pll_open1', assumed default net type 'wire' in ../../al_ip/eg4d_eth_rx_pll.v(85)
+HDL-1007 : undeclared symbol 'eg4d_eth_rx_pll_open11', assumed default net type 'wire' in ../../al_ip/eg4d_eth_rx_pll.v(87)
+HDL-1007 : undeclared symbol 'eg4d_eth_rx_pll_open10', assumed default net type 'wire' in ../../al_ip/eg4d_eth_rx_pll.v(87)
+HDL-1007 : undeclared symbol 'eg4d_eth_rx_pll_open9', assumed default net type 'wire' in ../../al_ip/eg4d_eth_rx_pll.v(87)
+HDL-1007 : analyze verilog file ../../rtl/top/top_eg4d_slave.v
+HDL-1007 : analyze verilog file ../../rtl/board_ref/PLL_0.v
+HDL-1007 : undeclared symbol 'PLL_0_open0', assumed default net type 'wire' in ../../rtl/board_ref/PLL_0.v(78)
+HDL-1007 : undeclared symbol 'PLL_0_open8', assumed default net type 'wire' in ../../rtl/board_ref/PLL_0.v(84)
+HDL-1007 : undeclared symbol 'PLL_0_open7', assumed default net type 'wire' in ../../rtl/board_ref/PLL_0.v(84)
+HDL-1007 : undeclared symbol 'PLL_0_open6', assumed default net type 'wire' in ../../rtl/board_ref/PLL_0.v(84)
+HDL-1007 : undeclared symbol 'PLL_0_open5', assumed default net type 'wire' in ../../rtl/board_ref/PLL_0.v(84)
+HDL-1007 : undeclared symbol 'PLL_0_open4', assumed default net type 'wire' in ../../rtl/board_ref/PLL_0.v(84)
+HDL-1007 : undeclared symbol 'PLL_0_open3', assumed default net type 'wire' in ../../rtl/board_ref/PLL_0.v(84)
+HDL-1007 : undeclared symbol 'PLL_0_open2', assumed default net type 'wire' in ../../rtl/board_ref/PLL_0.v(84)
+HDL-1007 : undeclared symbol 'PLL_0_open1', assumed default net type 'wire' in ../../rtl/board_ref/PLL_0.v(84)
+HDL-1007 : undeclared symbol 'PLL_0_open11', assumed default net type 'wire' in ../../rtl/board_ref/PLL_0.v(86)
+HDL-1007 : undeclared symbol 'PLL_0_open10', assumed default net type 'wire' in ../../rtl/board_ref/PLL_0.v(86)
+HDL-1007 : undeclared symbol 'PLL_0_open9', assumed default net type 'wire' in ../../rtl/board_ref/PLL_0.v(86)
+HDL-1007 : analyze verilog file ../../rtl/board_ref/rgmii_interface.v
+HDL-1007 : analyze verilog file ../../rtl/board_ref/IDDR.v
+HDL-1007 : analyze verilog file ../../rtl/board_ref/ODDR.v
+HDL-1007 : analyze verilog file ../../rtl/board_ref/ctl_mdio_strap_read.v
+HDL-1007 : analyze verilog file ../../rtl/board_ref/PLL_75.v
+HDL-1007 : analyze verilog file ../../rtl/ctl/ctl_key_matrix_scan.v
+HDL-1007 : analyze verilog file ../../rtl/ctl/ctl_key_state_tx.v
+HDL-1007 : analyze verilog file ../../rtl/ctl/tf_spi_master.v
+HDL-1007 : analyze verilog file ../../rtl/ctl/tf_sector_buf.v
+HDL-1007 : analyze verilog file ../../rtl/ctl/tf_card_ctrl.v
+HDL-1007 : analyze verilog file ../../rtl/aud/aud_pcm_fifo.v
+HDL-1007 : analyze verilog file ../../rtl/aud/aud_i2s_tx.v
+HDL-1007 : analyze verilog file ../../rtl/aud/aud_wav_player.v
+HDL-1007 : analyze verilog file ../../rtl/aud/aud_tone.v
+HDL-1007 : analyze verilog file ../../../common/rtl/ctl/ctl_gmii_tx_scheduler3.v
+HDL-1007 : analyze verilog file ../../../common/ctl_lpr_packet_link.v
+HDL-1007 : analyze verilog file ../../rtl/ctl/ctl_telemetry_rx.v
+HDL-1007 : analyze verilog file ../../rtl/ctl/ctl_plate_cycle_dispatch.v
+HDL-1007 : analyze verilog file ../../rtl/dsp/dsp_telemetry_seg.v
+PRJ-1401 : Successfully analyzed 22 source files.
+RUN-1002 : start command "commit_param -step design"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :       Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : ----------------------------------------------------------------
+RUN-1001 :   default_reg_initial  |    auto    |       auto       |        
+RUN-1001 :    hdl_warning_level   |   normal   |      normal      |        
+RUN-1001 : ----------------------------------------------------------------
+RUN-1002 : start command "elaborate -top top_eg4d_slave"
+HDL-1007 : port 'O_rx_dbg_flags' remains unconnected for this instance in ../../rtl/top/top_eg4d_slave.v(468)
+HDL-1007 : port 'O_rx_dbg_app_count' remains unconnected for this instance in ../../rtl/top/top_eg4d_slave.v(468)
+HDL-1007 : elaborate module top_eg4d_slave in ../../rtl/top/top_eg4d_slave.v(25)
+HDL-1007 : elaborate module PLL_0 in ../../rtl/board_ref/PLL_0.v(23)
+HDL-1007 : elaborate module EG_LOGIC_BUFG in D:\Program Files\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(5)
+HDL-1007 : elaborate module EG_PHY_PLL(FIN="25.000000",FBCLK_DIV=5,CLKC0_DIV=8,CLKC1_DIV=8,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC0_CPHASE=7,GMC_GAIN=2,ICP_CURRENT=9,KVCO=2,LPF_CAPACITOR=1,LPF_RESISTOR=8,SYNC_ENABLE="DISABLE") in D:\Program Files\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(889)
+HDL-1007 : elaborate module PLL_75 in ../../rtl/board_ref/PLL_75.v(29)
+HDL-1007 : elaborate module EG_PHY_PLL(FIN="25.000000",FBCLK_DIV=3,CLKC0_DIV=8,CLKC1_DIV=8,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC0_CPHASE=7,GMC_GAIN=2,ICP_CURRENT=9,KVCO=2,LPF_CAPACITOR=1,LPF_RESISTOR=8,SYNC_ENABLE="DISABLE") in D:\Program Files\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(889)
+HDL-1007 : elaborate module eg4d_eth_rx_pll in ../../al_ip/eg4d_eth_rx_pll.v(23)
+HDL-1007 : elaborate module EG_PHY_PLL(FIN="125.000000",CLKC0_DIV=8,CLKC1_DIV=8,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",STDBY_ENABLE="DISABLE",CLKC1_FPHASE=2,CLKC0_CPHASE=7,CLKC1_CPHASE=6,GMC_GAIN=6,GMC_TEST=15,ICP_CURRENT=13,KVCO=4,LPF_CAPACITOR=1,LPF_RESISTOR=2,SYNC_ENABLE="DISABLE") in D:\Program Files\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(889)
+HDL-1007 : elaborate module ctl_telemetry_rx in ../../rtl/ctl/ctl_telemetry_rx.v(16)
+HDL-1007 : elaborate module dsp_telemetry_seg in ../../rtl/dsp/dsp_telemetry_seg.v(18)
+HDL-1007 : elaborate module rgmii_interface in ../../rtl/board_ref/rgmii_interface.v(14)
+HDL-1007 : elaborate module ODDR in ../../rtl/board_ref/ODDR.v(32)
+HDL-1007 : elaborate module EG_LOGIC_ODDR in D:\Program Files\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(66)
+HDL-1007 : elaborate module IDDR in ../../rtl/board_ref/IDDR.v(34)
+HDL-1007 : elaborate module EG_LOGIC_IDDR in D:\Program Files\Anlogic\TD_6.2.1_Engineer_6.2.168.116\arch/eagle_macro.v(57)
+HDL-1007 : elaborate module ctl_lpr_packet_link(P_LOCAL_MAC=48'b0100000000000000000011001010100001100100001,P_PEER_MAC=48'b0100000000000000000000100100011010001010110,P_TX_ARB_EN=1) in ../../../common/ctl_lpr_packet_link.v(11)
+HDL-1007 : extracting RAM for identifier 'S_tx_mem' in ../../../common/ctl_lpr_packet_link.v(96)
+HDL-1007 : extracting RAM for identifier 'S_rx_mem' in ../../../common/ctl_lpr_packet_link.v(98)
+HDL-1007 : elaborate module ctl_key_matrix_scan in ../../rtl/ctl/ctl_key_matrix_scan.v(23)
+HDL-1007 : elaborate module ctl_key_state_tx in ../../rtl/ctl/ctl_key_state_tx.v(26)
+HDL-1007 : elaborate module ctl_gmii_tx_scheduler3 in ../../../common/rtl/ctl/ctl_gmii_tx_scheduler3.v(16)
+HDL-1007 : elaborate module ctl_mdio_strap_read(P_PHY_ADDR=5'b01,P_HALF=8'b01101,P_STARTUP_CYCLES=2500001) in ../../rtl/board_ref/ctl_mdio_strap_read.v(19)
+HDL-1007 : elaborate module ctl_plate_cycle_dispatch in ../../rtl/ctl/ctl_plate_cycle_dispatch.v(52)
+HDL-1007 : extracting RAM for identifier 'S_queue_mem' in ../../rtl/ctl/ctl_plate_cycle_dispatch.v(92)
+HDL-1007 : elaborate module tf_card_ctrl(DIV_INIT=16'b011111,DIV_RUN=16'b01,CHECK_RD_CRC=1'b0) in ../../rtl/ctl/tf_card_ctrl.v(79)
+HDL-1007 : elaborate module tf_spi_master in ../../rtl/ctl/tf_spi_master.v(37)
+HDL-1007 : elaborate module tf_sector_buf in ../../rtl/ctl/tf_sector_buf.v(27)
+HDL-1007 : extracting RAM for identifier 'S_mem' in ../../rtl/ctl/tf_sector_buf.v(46)
+HDL-1007 : elaborate module aud_pcm_fifo in ../../rtl/aud/aud_pcm_fifo.v(31)
+HDL-1007 : extracting RAM for identifier 'S_mem' in ../../rtl/aud/aud_pcm_fifo.v(51)
+HDL-1007 : elaborate module aud_i2s_tx in ../../rtl/aud/aud_i2s_tx.v(44)
+HDL-1007 : elaborate module aud_wav_player in ../../rtl/aud/aud_wav_player.v(51)
+HDL-1007 : elaborate module aud_tone in ../../rtl/aud/aud_tone.v(24)
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-5001 WARNING: Contains anonymous inst(s) and/or net(s) that have not been renamed
+HDL-1200 : Current top model is top_eg4d_slave
+HDL-1100 : Inferred 5 RAMs.
+RUN-1002 : start command "read_adc ../../constr/eg4d_c13_c14.adc"
+RUN-1002 : start command "set_pin_assignment  I_clk_25m   LOCATION = P157; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  O_led[0]   LOCATION = P89;  IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_led[1]   LOCATION = P90;  IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_led[2]   LOCATION = P94;  IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_led[3]   LOCATION = P93;  IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_eth_txc   LOCATION = P146; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_eth_txd[0]   LOCATION = P144; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_eth_txd[1]   LOCATION = P143; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_eth_txd[2]   LOCATION = P141; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_eth_txd[3]   LOCATION = P138; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_eth_tx_ctl   LOCATION = P145; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  I_eth_rxc   LOCATION = P159; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  I_eth_rxd[0]   LOCATION = P150; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  I_eth_rxd[1]   LOCATION = P149; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  I_eth_rxd[2]   LOCATION = P148; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  I_eth_rxd[3]   LOCATION = P147; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  I_eth_rx_ctl   LOCATION = P158; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_eth_mdc   LOCATION = P133; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  IO_eth_mdio   LOCATION = P136; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  O_eth_rst_n   LOCATION = P62;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  IO_key_row[0]   LOCATION = P112; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  IO_key_row[1]   LOCATION = P109; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  IO_key_row[2]   LOCATION = P104; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  IO_key_row[3]   LOCATION = P91;  IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  IO_key_col[0]   LOCATION = P119; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  IO_key_col[1]   LOCATION = P118; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  IO_key_col[2]   LOCATION = P115; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  IO_key_col[3]   LOCATION = P114; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  O_tf_clk   LOCATION = P25; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_tf_cs_n   LOCATION = P39; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  O_tf_mosi   LOCATION = P35; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  I_tf_miso   LOCATION = P19; IOSTANDARD = LVCMOS25; PULLTYPE = PULLUP; "
+RUN-1002 : start command "set_pin_assignment  O_aud_bclk   LOCATION = P37; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_aud_lrclk   LOCATION = P31; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_aud_din   LOCATION = P22; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_aud_sd   LOCATION = P28; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_aud_gain   LOCATION = P26; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_seg_sclk   LOCATION = P173; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_seg_latch   LOCATION = P174; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1002 : start command "set_pin_assignment  O_seg_data   LOCATION = P176; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; "
+RUN-1001 : Starting of IO setups legality check.
+RUN-1001 : Starting of IO vref setups legality check.
+RUN-1002 : start command "read_sdc ../../constr/eg4d_c13_c14.sdc"
+RUN-1002 : start command "read_sdc ../../constr/eg4d_business_cdc.sdc"
+RUN-1002 : start command "export_db eg4d_slave_core_business_elaborate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "commit_param -step rtl"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : -------------------------------------------------------------------
+RUN-1001 :         Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------------------
+RUN-1001 :        fix_undriven       |     0      |        0         |        
+RUN-1001 :   gated_clock_conversion  |    off     |       off        |        
+RUN-1001 :         infer_fsm         |    auto    |       auto       |        
+RUN-1001 :         infer_gsr         |    off     |       off        |        
+RUN-1001 :         infer_rom         |     on     |        on        |        
+RUN-1001 :       keep_hierarchy      |    auto    |       auto       |        
+RUN-1001 :        merge_equal        |     on     |        on        |        
+RUN-1001 :      min_control_set      |     8      |        8         |        
+RUN-1001 :       min_ripple_len      |    auto    |       auto       |        
+RUN-1001 :          seq_syn          |     on     |        on        |        
+RUN-1001 : -------------------------------------------------------------------
+RUN-1002 : start command "insert_debugger"
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file D:/Program Files/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
+SYN-1001 : Stage 1 | Optimize RTL
+SYN-1001 : Stage 1.1 | Check Design Sanity
+SYN-1001 : End Stage 1.1 | Check Design Sanity; Time: 0.004154s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%); Memory(MB): used = 166, reserved = 280, peak = 166;
+
+SYN-1079 : finish stage Check Design Sanity. Total instances: 11705, Total nets: 30760.
+
+SYN-1001 : Stage 1.2 | Initialize Design
+SYN-1001 : End Stage 1.2 | Initialize Design; Time: 0.344580s wall, 0.328125s user + 0.000000s system = 0.328125s CPU (95.2%); Memory(MB): used = 166, reserved = 280, peak = 166;
+
+SYN-1079 : finish stage Initialize Design. Total instances: 4652, Total nets: 22328.
+
+SYN-1001 : Stage 1.3 | Flatten Module
+SYN-1011 : Flatten model top_eg4d_slave
+SYN-1001 : End Stage 1.3 | Flatten Module; Time: 0.063573s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (98.3%); Memory(MB): used = 168, reserved = 280, peak = 168;
+
+SYN-1079 : finish stage Flatten Module. Total instances: 4631, Total nets: 21448.
+
+SYN-1001 : Stage 1.4 | Uniform Instance
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-1001 : End Stage 1.4 | Uniform Instance; Time: 0.014580s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (107.2%); Memory(MB): used = 157, reserved = 153, peak = 168;
+
+SYN-1079 : finish stage Uniform Instance. Total instances: 4531, Total nets: 21346.
+
+SYN-1001 : Stage 1.5 | Optimize Design
+SYN-1066 : Inferred FSM for state register 'u_aud_tf/S_ph_reg' in module 'top_eg4d_slave'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                    00              001
+                    01              010
+                    10              100
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_aud_tf/S_ph_reg' using encoding 'one_hot' in model 'top_eg4d_slave'
+SYN-1066 : Inferred FSM for state register 'u_aud_tone/S_st_reg' in module 'top_eg4d_slave'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                    00              001
+                    01              010
+                    10              100
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_aud_tone/S_st_reg' using encoding 'one_hot' in model 'top_eg4d_slave'
+SYN-1066 : Inferred FSM for state register 'u_key_tx/S_state_reg' in module 'top_eg4d_slave'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                   000            00001
+                   001            00010
+                   010            00100
+                   011            01000
+                   100            10000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_key_tx/S_state_reg' using encoding 'one_hot' in model 'top_eg4d_slave'
+SYN-1066 : Inferred FSM for state register 'u_mdio_diag/S_state_reg' in module 'top_eg4d_slave'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                  0000           000001
+                  0001           000010
+                  0010           000100
+                  0100           001000
+                  0101           010000
+                  0011           100000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_mdio_diag/S_state_reg' using encoding 'one_hot' in model 'top_eg4d_slave'
+SYN-1066 : Inferred FSM for state register 'u_mdio_diag/S_step_reg' in module 'top_eg4d_slave'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                   000           000001
+                   001           000010
+                   010           000100
+                   011           001000
+                   100           010000
+                   101           100000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_mdio_diag/S_step_reg' using encoding 'one_hot' in model 'top_eg4d_slave'
+SYN-1066 : Inferred FSM for state register 'u_ocr_packet_link/S_rx_state_reg' in module 'top_eg4d_slave'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                    00              001
+                    01              010
+                    10              100
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_ocr_packet_link/S_rx_state_reg' using encoding 'one_hot' in model 'top_eg4d_slave'
+SYN-1066 : Inferred FSM for state register 'u_ocr_packet_link/S_tx_state_reg' in module 'top_eg4d_slave'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                   000            00001
+                   001            00010
+                   010            00100
+                   011            01000
+                   100            10000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_ocr_packet_link/S_tx_state_reg' using encoding 'one_hot' in model 'top_eg4d_slave'
+SYN-1066 : Inferred FSM for state register 'u_plate_cycle_dispatch/S_state_q_reg' in module 'top_eg4d_slave'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                   000            00001
+                   001            00010
+                   010            00100
+                   011            01000
+                   100            10000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_plate_cycle_dispatch/S_state_q_reg' using encoding 'one_hot' in model 'top_eg4d_slave'
+SYN-1066 : Inferred FSM for state register 'u_telemetry_rx/S_phase_reg' in module 'top_eg4d_slave'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                    00              001
+                    01              010
+                    10              100
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_telemetry_rx/S_phase_reg' using encoding 'one_hot' in model 'top_eg4d_slave'
+SYN-1066 : Inferred FSM for state register 'u_telemetry_rx/S_state_reg' in module 'top_eg4d_slave'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                    00             0001
+                    01             0010
+                    10             0100
+                    11             1000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_telemetry_rx/S_state_reg' using encoding 'one_hot' in model 'top_eg4d_slave'
+SYN-1066 : Inferred FSM for state register 'u_telemetry_seg/S_state_reg' in module 'top_eg4d_slave'
+--------------------------------------------
+     Previous Encoding     New Encoding
+--------------------------------------------
+                   000           000001
+                   001           000010
+                   010           000100
+                   011           001000
+                   100           010000
+                   101           100000
+--------------------------------------------
+SYN-1067 : encoded FSM with state register 'u_telemetry_seg/S_state_reg' using encoding 'one_hot' in model 'top_eg4d_slave'
+SYN-1057 : Inferred 11 FSM(s)
+SYN-1001 : Optimize 2 less-than instances
+SYN-1032 : 20049/31 useful/useless nets, 4381/4 useful/useless insts
+SYN-1001 : Bypass 3 mux instances
+SYN-1021 : Optimized 73 onehot mux instances.
+SYN-1068 : Optimized 39 binary mux instances.
+SYN-1019 : Optimized 5 mux instances.
+SYN-1021 : Optimized 5 onehot mux instances.
+SYN-1021 : Optimized 1 onehot mux instances.
+SYN-1001 : Optimize 2 less-than instances
+SYN-1016 : Merged 968 instances.
+SYN-1025 : Merged 2 RAM ports.
+SYN-1027 : Infer Logic DRAM(u_aud_fifo/ramread0_syn_4) read 512x16, write 512x16
+SYN-1025 : Merged 1 RAM ports.
+SYN-1026 : Infer Logic BRAM(u_aud_tf/u_buf/ramread0_syn_40)
+	 port mode: single dual port
+	 port a size: 512 x 8	 write mode: NORMAL
+	 port b size: 512 x 8	 write mode: READBEFOREWRITE
+SYN-1026 : Infer Logic BRAM(u_aud_tf/u_buf/ramread0_syn_41)
+	 port mode: single dual port
+	 port a size: 512 x 8	 write mode: NORMAL
+	 port b size: 512 x 8	 write mode: READBEFOREWRITE
+SYN-1026 : Infer Logic BRAM(u_ocr_packet_link/ramread0_syn_4)
+	 port mode: single dual port
+	 port a size: 1024 x 8	 write mode: NORMAL
+	 port b size: 1024 x 8	 write mode: READBEFOREWRITE
+SYN-1026 : Infer Logic BRAM(u_ocr_packet_link/ramread1_syn_4)
+	 port mode: single dual port
+	 port a size: 1024 x 8	 write mode: NORMAL
+	 port b size: 1024 x 8	 write mode: READBEFOREWRITE
+SYN-1025 : Merged 3 RAM ports.
+SYN-1027 : Infer Logic DRAM(u_plate_cycle_dispatch/ramread0_syn_162) read 64x8, write 64x8
+SYN-1023 : Infer 2 Logic DRAMs, 4 Logic BRAMs.
+USR-1002 : Derived clock:  create_generated_clock -name {u_pll/pll_inst.clkc[0]} -source [get_ports {I_clk_25m}] -master_clock {eg4d_clk_25m} -multiply_by 5.0000 -duty_cycle 50.0000 [get_pins {u_pll/pll_inst.clkc[0]}]
+USR-1002 : Derived clock:  create_generated_clock -name {u_pll/pll_inst.clkc[1]} -source [get_ports {I_clk_25m}] -master_clock {eg4d_clk_25m} -multiply_by 5.0000 -phase 90 -duty_cycle 50.0000 [get_pins {u_pll/pll_inst.clkc[1]}]
+USR-1002 : Derived clock:  create_generated_clock -name {u_rx_pll/pll_inst.clkc[0]} -source [get_ports {I_eth_rxc}] -master_clock {eg4d_eth_rxc} -multiply_by 1.0000 -duty_cycle 50.0000 [get_pins {u_rx_pll/pll_inst.clkc[0]}]
+USR-1002 : Derived clock:  create_generated_clock -name {u_rx_pll/pll_inst.clkc[1]} -source [get_ports {I_eth_rxc}] -master_clock {eg4d_eth_rxc} -multiply_by 1.0000 -phase 326 -duty_cycle 50.0000 [get_pins {u_rx_pll/pll_inst.clkc[1]}]
+SYN-1016 : Merged 256 instances.
+SYN-1001 : End Stage 1.5 | Optimize Design; Time: 1.846975s wall, 1.796875s user + 0.031250s system = 1.828125s CPU (99.0%); Memory(MB): used = 273, reserved = 256, peak = 273;
+
+SYN-1079 : finish stage Optimize Design. Total instances: 9538, Total nets: 10543.
+
+SYN-1001 : Stage 1.6 | Optimize Iteratively
+SYN-1018 : Transformed 1 mux instances.
+SYN-1019 : Optimized 1 mux instances.
+SYN-1021 : Optimized 761 onehot mux instances.
+SYN-1014 : Optimize round 1
+SYN-1044 : Optimized 47 inv instances.
+SYN-1017 : Remove 15 const input seq instances
+SYN-1018 : Transformed 1 mux instances.
+SYN-1019 : Optimized 100 mux instances.
+SYN-1020 : Optimized 584 distributor mux.
+SYN-1001 : Optimize 21 less-than instances
+SYN-1019 : Optimized 121 mux instances.
+SYN-2595 : bram inst: u_aud_tf/u_buf/ramread0_syn_40 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: u_aud_tf/u_buf/ramread0_syn_41 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: u_ocr_packet_link/ramread0_syn_4 is set to PDPW/SP from DP for resource saving
+SYN-2595 : bram inst: u_ocr_packet_link/ramread1_syn_4 is set to PDPW/SP from DP for resource saving
+SYN-1016 : Merged 15204 instances.
+SYN-1015 : Optimize round 1, 41434 better
+SYN-1014 : Optimize round 2
+SYN-1044 : Optimized 30 inv instances.
+SYN-1017 : Remove 1 const input seq instances
+SYN-1019 : Optimized 40 mux instances.
+SYN-1020 : Optimized 19 distributor mux.
+SYN-1019 : Optimized 399 mux instances.
+SYN-1016 : Merged 57 instances.
+SYN-1015 : Optimize round 2, 599 better
+SYN-3010 : Optimized 33 DFF(s)
+SYN-1014 : Optimize round 1
+SYN-1017 : Remove 8 const input seq instances
+SYN-1020 : Optimized 231 distributor mux.
+SYN-1019 : Optimized 3 mux instances.
+SYN-1016 : Merged 1085 instances.
+SYN-1015 : Optimize round 1, 1359 better
+SYN-1014 : Optimize round 2
+SYN-1044 : Optimized 2 inv instances.
+SYN-1019 : Optimized 2 mux instances.
+SYN-1020 : Optimized 22 distributor mux.
+SYN-1016 : Merged 56 instances.
+SYN-1015 : Optimize round 2, 82 better
+SYN-1014 : Optimize round 3
+SYN-1015 : Optimize round 3, 0 better
+SYN-1001 : End Stage 1.6 | Optimize Iteratively; Time: 3.847353s wall, 3.765625s user + 0.062500s system = 3.828125s CPU (99.5%); Memory(MB): used = 279, reserved = 271, peak = 348;
+
+SYN-1079 : finish stage Optimize Iteratively. Total instances: 8989, Total nets: 9893.
+
+SYN-1001 : Stage 1.7 | Check Design
+SYN-1001 : End Stage 1.7 | Check Design; Time: 0.004647s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (336.2%); Memory(MB): used = 279, reserved = 271, peak = 348;
+
+SYN-1079 : finish stage Check Design. Total instances: 8989, Total nets: 9893.
+
+SYN-1001 : End Stage 1 | Optimize RTL; Time: 6.126661s wall, 5.984375s user + 0.093750s system = 6.078125s CPU (99.2%); Memory(MB): used = 279, reserved = 271, peak = 348;
+
+SYN-1079 : finish stage Optimize RTL. Total instances: 8989, Total nets: 9893.
+
+RUN-1003 : finish command "optimize_rtl" in  6.136328s wall, 6.000000s user + 0.093750s system = 6.093750s CPU (99.3%)
+
+RUN-1004 : used memory is 279 MB, reserved memory is 271 MB, peak memory is 348 MB
+RUN-1002 : start command "report_area -file eg4d_slave_core_business_rtl.area"
+RUN-1001 : standard
+***Report Model: top_eg4d_slave Device: EG4D20EG176***
+
+IO Statistics
+#IO                        40
+  #input                    8
+  #output                  23
+  #inout                    9
+
+Gate Statistics
+#Basic gates             5529
+  #and                    630
+  #nand                     0
+  #or                     339
+  #nor                      0
+  #xor                    281
+  #xnor                     0
+  #buf                      0
+  #not                    605
+  #bufif1                   9
+  #MX21                  1213
+  #FADD                     0
+  #DFF                   2452
+  #LATCH                    0
+#MACRO_ADD                157
+#MACRO_EQ                 209
+#MACRO_MUX               2344
+#MACRO_OTHERS              21
+
+RUN-1002 : start command "export_db eg4d_slave_core_business_rtl.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "commit_param -step gate"
+RUN-1001 : Print Global Property
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   Parameters   |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------
+RUN-1001 :   enable_seed  |    off     |       off        |        
+RUN-1001 :     message    |  standard  |     standard     |        
+RUN-1001 :   qor_monitor  |     on     |        on        |        
+RUN-1001 :   syn_ip_flow  |    off     |       off        |        
+RUN-1001 :     thread     |    auto    |       auto       |        
+RUN-1001 : --------------------------------------------------------
+RUN-1002 : start command "set_param gate pack_effort high"
+RUN-1001 : Print Gate Property
+RUN-1001 : -----------------------------------------------------------
+RUN-1001 :     Parameters    |  Settings  |  Default Values  |  Note  
+RUN-1001 : -----------------------------------------------------------
+RUN-1001 :     eram_init     |    off     |       off        |        
+RUN-1001 :      map_mode     |    auto    |       auto       |        
+RUN-1001 :    pack_effort    |    high    |      medium      |   *    
+RUN-1001 :   pack_seq_in_io  |    auto    |       auto       |        
+RUN-1001 :       report      |  standard  |     standard     |        
+RUN-1001 : -----------------------------------------------------------
+RUN-1002 : start command "optimize_gate -packarea eg4d_slave_core_business_gate.area"
+RUN-1001 : Open license file D:/Program Files/Anlogic/TD_6.2.1_Engineer_6.2.168.116/license/Anlogic.lic
+SYN-1001 : Stage 2 | Optimize Gate
+SYN-1001 : Stage 2.1 | Map Reg
+SYN-1001 : End Stage 2.1 | Map Reg; Time: 0.109791s wall, 0.109375s user + 0.000000s system = 0.109375s CPU (99.6%); Memory(MB): used = 289, reserved = 402, peak = 348;
+
+SYN-1079 : finish stage Map Reg. Total instances: 8989, Total nets: 9893.
+
+SYN-1001 : Stage 2.2 | Map IO
+SYN-2001 : Map 40 IOs to PADs of model 'top_eg4d_slave'
+SYN-1001 : End Stage 2.2 | Map IO; Time: 0.054733s wall, 0.046875s user + 0.000000s system = 0.046875s CPU (85.6%); Memory(MB): used = 290, reserved = 402, peak = 348;
+
+SYN-1001 : Stage 2.3 | Map Macro
+RUN-1002 : start command "update_pll_param -module top_eg4d_slave"
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2501 : 4 BUFG to GCLK
+SYN-6562 WARNING: The init value of "u_aud_tf/u_buf/ramread0_syn_40(../../rtl/ctl/tf_sector_buf.v(61))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_aud_tf/u_buf/ramread0_syn_41(../../rtl/ctl/tf_sector_buf.v(61))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_ocr_packet_link/ramread0_syn_4(../../../common/ctl_lpr_packet_link.v(450))" will be ignored since gate eram_init is set to off
+SYN-6562 WARNING: The init value of "u_ocr_packet_link/ramread1_syn_4(../../../common/ctl_lpr_packet_link.v(481))" will be ignored since gate eram_init is set to off
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-1016 : Merged 27 instances.
+SYN-2571 : Optimize after map_dsp, round 1, 27 better
+SYN-2571 : Optimize after map_dsp, round 2
+SYN-2571 : Optimize after map_dsp, round 2, 0 better
+SYN-1001 : Throwback 280 control mux instances
+SYN-1001 : Generate 1 bigger adders
+SYN-1001 : Optimize 7 adders
+SYN-1001 : Optimize 1 less-than instances
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 637 instances.
+SYN-2501 : Optimize round 1, 2291 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 1 instances.
+SYN-2501 : Optimize round 1, 1 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Map 155 macro adder(s)
+SYN-1019 : Optimized 2823 mux instances.
+SYN-1016 : Merged 308 instances.
+SYN-5011 WARNING: Undriven pin: model "top_eg4d_slave" / inst "u_key_scan/S_col_meta_reg[0]" in ../../rtl/ctl/ctl_key_matrix_scan.v(79) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "top_eg4d_slave" / inst "u_key_scan/S_col_meta_reg[1]" in ../../rtl/ctl/ctl_key_matrix_scan.v(79) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "top_eg4d_slave" / inst "u_key_scan/S_col_meta_reg[2]" in ../../rtl/ctl/ctl_key_matrix_scan.v(79) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "top_eg4d_slave" / inst "u_key_scan/S_col_meta_reg[3]" in ../../rtl/ctl/ctl_key_matrix_scan.v(79) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "top_eg4d_slave" / inst "u_key_scan/S_row_meta_reg[0]" in ../../rtl/ctl/ctl_key_matrix_scan.v(79) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "top_eg4d_slave" / inst "u_key_scan/S_row_meta_reg[1]" in ../../rtl/ctl/ctl_key_matrix_scan.v(79) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "top_eg4d_slave" / inst "u_key_scan/S_row_meta_reg[2]" in ../../rtl/ctl/ctl_key_matrix_scan.v(79) / pin "clk"
+SYN-5011 WARNING: Undriven pin: model "top_eg4d_slave" / inst "u_key_scan/S_row_meta_reg[3]" in ../../rtl/ctl/ctl_key_matrix_scan.v(79) / pin "clk"
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-1001 : End Stage 2.3 | Map Macro; Time: 1.457760s wall, 1.421875s user + 0.015625s system = 1.437500s CPU (98.6%); Memory(MB): used = 314, reserved = 415, peak = 348;
+
+SYN-1079 : finish stage Map Macro. Total instances: 14170, Total nets: 15464.
+
+SYN-1001 : Stage 2.4 | Map Gate
+SYN-3001 : Collect 3461 PI 1937 PO (84 timing unconstrained) for mapping
+SYN-2581 : Mapping with K=5, #lut = 3729 (3.42), #lev = 15 (3.90), #crit_level = 0
+SYN-2551 : Post LUT mapping optimization.
+SYN-2581 : Mapping with K=5, #lut = 3667 (3.39), #lev = 14 (4.14), #crit_level = 0
+SYN-3001 : Logic optimization opt = 1.08 sec, map = 0.36 sec, post map opt = 0.94 sec.
+SYN-1001 : End Stage 2.4 | Map Gate; Time: 3.823901s wall, 3.734375s user + 0.015625s system = 3.750000s CPU (98.1%); Memory(MB): used = 338, reserved = 445, peak = 348;
+
+SYN-1001 : Packing model "top_eg4d_slave" ...
+SYN-4010 : Pack lib has 57 rtl pack models with 26 top pack blocks
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-4002 : Packing 2437 DFF/LATCH to SEQ ...
+SYN-4009 : Pack 41 carry chain into lslice
+SYN-4007 : Packing 761 adder to BLE ...
+SYN-4008 : Packed 761 adder and 7 SEQ to BLE.
+SYN-4007 : Packing 0 gate4 to BLE ...
+SYN-4008 : Packed 0 gate4 and 0 SEQ to BLE.
+SYN-4013 : Packed 136 DRAM and 0 SEQ.
+RUN-1002 : start command "report_qor -step gate -file gate.qor"
+RUN-1002 : start command "start_timer"
+-----------------------------------------------------------
+| QoR metrics               |         value               |
+-----------------------------------------------------------
+| Timing                    |                             |
+|     Setup WNS             |        -4184                |
+|     Setup TNS             |       -34120                |
+|     Num of violated S-EP  |           15                |
+|     Hold WNS              |          471                |
+|     Hold TNS              |            0                |
+|     Num of violated H-EP  |            0                |
+-----------------------------------------------------------
+| Utilization               |                             |
+|     #registers            |         2430                |
+|     #luts                 |         3663                |
+|     #lut1                 |           26                |
+|     #lut1(~A)             |           26                |
+|     #slices               |         1015                |
+|     slices percentage     |       10.36%                |
+|     #RAMs                 |            4                |
+|     #DSPs                 |            0                |
+|     #f7mux                |        0.00%                |
+|     #MACROs               |          238                |
+|     #insts in MACRO       |         1015                |
+-----------------------------------------------------------
+| kept_net                  |                             |
+|     #syn_keep             |          346                |
+|     #keep_hier            |            0                |
+|     #dont_touch           |            0                |
+|     #mark_debug           |            0                |
+|     #max_fanout_keep      |            0                |
+|     #async_reg            |           16                |
+-----------------------------------------------------------
+| Top 10% datanet fanout#   |        65.48                |
+| dff(single fanout)->dff   |           95                |
+| dff(single fanout)->dram  |            0                |
+-----------------------------------------------------------
+| Over-quota path num*      |                             |
+|     eg4d_eth_txc          |            5                |
+|     Total                 |            5                |
+-----------------------------------------------------------
+| Rent**                    |                             |
+-----------------------------------------------------------
+Note*: Over-quota path shows the over-path-level-threshold path number of each clock.
+       The clock will not be shown if no path is with path level over the threshold.
+       The threshold is defined as worst path_margin / 800ps.
+Note**: Rent shows the rent exponent value of the modules whose rent value exceeds the threshold.
+        Only modules under top are reported, and the threshold is defined as 0.7.
+
+Over-quota Path Details
+------------------------------------------------------------------------------------------------------------------
+     Clock      |  Index  |  Budget(Period)  |  Level(Quota)  |  Cell Type List  |        Reason        |  Slack  
+------------------------------------------------------------------------------------------------------------------
+  eg4d_eth_txc  |    1    |   -2684(8000)    |     0(-2)      |       PAD        |  large launch delay  |  -4184  
+                |    2    |   -2684(8000)    |     0(-2)      |       PAD        |  large launch delay  |  -4184  
+                |    3    |   -2684(8000)    |     0(-2)      |       PAD        |  large launch delay  |  -4184  
+                |    4    |   -2684(8000)    |     0(-2)      |       PAD        |  large launch delay  |  -4184  
+                |    5    |   -2684(8000)    |     0(-2)      |       PAD        |  large launch delay  |  -4184  
+------------------------------------------------------------------------------------------------------------------
+Note: Table only show top 5 paths for each clock group in default
+
+Logic Level Distribution
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Clock                      |  Period            |  0     |  1    |  2     |  3    |  4    |  5    |  6     |  7    |  8    |  9   |  10   |  11  |  12  |  13  |  14  |  15  |  16
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  eg4d_clk_25m               |  40.000ns (25MHz)  |  1777  |  253  |  1099  |  645  |  434  |  494  |  1004  |  303  |  214  |  27  |  168  |  54  |  40  |  5   |  13  |  8   |  5
+  eg4d_eth_rxc               |  8.000ns (125MHz)  |  0     |  0    |  0     |  0    |  0    |  0    |  0     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  eg4d_eth_txc               |  8.000ns (125MHz)  |  5     |  0    |  0     |  0    |  0    |  0    |  0     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  eg4d_mode_75m              |  13.333ns (75MHz)  |  0     |  0    |  0     |  0    |  0    |  0    |  0     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  eg4d_mode_75m_90           |  13.333ns (75MHz)  |  0     |  0    |  0     |  0    |  0    |  0    |  0     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  u_pll/pll_inst.clkc[0]     |  8.000ns (125MHz)  |  121   |  18   |  12    |  55   |  39   |  63   |  9     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  u_pll/pll_inst.clkc[1]     |  8.000ns (125MHz)  |  2     |  1    |  0     |  0    |  0    |  0    |  0     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  u_rx_pll/pll_inst.clkc[0]  |  8.000ns (125MHz)  |  0     |  0    |  0     |  0    |  0    |  0    |  0     |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  u_rx_pll/pll_inst.clkc[1]  |  8.000ns (125MHz)  |  222   |  80   |  17    |  75   |  43   |  47   |  58    |  0    |  0    |  0   |  0    |  0   |  0   |  0   |  0   |  0   |  0
+  Total                      |  NA                |  2127  |  352  |  1128  |  775  |  516  |  604  |  1071  |  303  |  214  |  27  |  168  |  54  |  40  |  5   |  13  |  8   |  5
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Note: The table count the worst 100000 paths, each endpoint count only one time.(7410 paths analyzed)
+
+Hierarchical Rent Exponent Report
++-----------------------------------------------------------------------------+
+|Inst             |Model               |Rent     |Cell     |Pin     |Term     |
++-----------------------------------------------------------------------------+
+|top              |top_eg4d_slave      |0.18     |7883     |38326   |25       |
+|  u_telemetry_rx |ctl_telemetry_rx_16 |0.55     |1100     |3533    |146      |
+|  u_aud_player   |aud_wav_player_3    |0.43     |1723     |7861    |111      |
++-----------------------------------------------------------------------------+
+Note: Cell represents total number of cells inside module; Pin represents total number of pins
+      which have net connection inside module; Term represents total number of PIs and POs of module.
+      Rent represents the relationship between number of terms and number of cells in module.
+      A module with higher rent corresponds to highly connected logic and strong connectivity with others.
+Report gate stage QoR done.
+
+RUN-1002 : start command "report_area -file eg4d_slave_core_business_gate.area"
+RUN-1001 : standard
+***Report Model: top_eg4d_slave Device: EG4D20EG176***
+
+IO Statistics
+#IO                        40   out of    130   30.77%
+  #input                    8
+  #output                  23
+  #inout                    9
+
+LUT Statistics
+#Total_luts              3663
+  #lut4                  3263
+  #lut5                   400
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b               0
+
+Utilization Statistics
+#lut                     5693   out of  19600   29.05%
+#reg                     2437   out of  19600   12.43%
+#bram                       4   out of     64    6.25%
+  #bram9k                   4
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#dsp                        0   out of     29    0.00%
+#pad                       40   out of    130   30.77%
+  #ireg                    14
+  #oreg                    16
+  #treg                     1
+#pll                        3   out of      4   75.00%
+#gclk                       4   out of     16   25.00%
+
+SYN-1001 : End Stage 2 | Optimize Gate; Time: 6.466205s wall, 6.218750s user + 0.078125s system = 6.296875s CPU (97.4%); Memory(MB): used = 340, reserved = 447, peak = 348;
+
+RUN-1003 : finish command "optimize_gate -packarea eg4d_slave_core_business_gate.area" in  6.473420s wall, 6.218750s user + 0.078125s system = 6.296875s CPU (97.3%)
+
+RUN-1004 : used memory is 340 MB, reserved memory is 447 MB, peak memory is 348 MB
+RUN-1002 : start command "legalize_phy_inst"
+SYN-1001 : Stage 3 | Legalize Phy Inst
+SYN-1011 : Flatten model top_eg4d_slave
+SYN-1001 : End Stage 3 | Legalize Phy Inst; Time: 0.020145s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (77.6%); Memory(MB): used = 340, reserved = 447, peak = 348;
+
+RUN-1002 : start command "update_timing"
+RUN-1002 : start command "start_timer"
+RUN-1002 : start command "report_timing_status -file eg4d_slave_core_business_gate.ts"
+RUN-1002 : start command "report_timing_summary -file eg4d_slave_core_business_gate.timing"
+RUN-1002 : start command "flow_status -file flow.status"
+Location         : D:\Project\Anlogic\push\Eyetrack\two_board\EG4D\eg4d_slave_core_business_Runs\syn_1
+Running with     : Tang Dynasty v6.2.168116
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : top_eg4d_slave
+Device           : EG4D20EG176
+Speed            : NA
+
+Timing Mode      : basic
+Setup            : WNS -4184ps  TNS   -34120ps  NUM_FEPS    15
+Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
+
+Flow Statistics  :
+RUN-1001 : Flow Statistics:
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :   optimize_gate  |    1     |   6s(50%)   |    6(50%)     |        340        |        348        
+RUN-1001 :   optimize_rtl   |    1     |   6s(50%)   |    6(50%)     |        279        |        348        
+RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        93         |        93         
+RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        155        |        155        
+RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        155        |        155        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :       total      |    6     |     12s     |      12       |        340        |        348        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1002 : start command "export_db eg4d_slave_core_business_gate.db"
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported /
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported packer
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported ATMR Setting
+RUN-1001 : Exported timing constraints
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1001 : Exported ChipWatcher
+RUN-1002 : start command "export_flow_status -s read_design -e opt_gate"
+RUN-1002 : start command "flow_status"
+
+Location         : D:\Project\Anlogic\push\Eyetrack\two_board\EG4D\eg4d_slave_core_business_Runs\syn_1
+Running with     : Tang Dynasty v6.2.168116
+                   Copyright (c) 2012-2025 Anlogic Inc.
+Top Model        : top_eg4d_slave
+Device           : EG4D20EG176
+Speed            : NA
+
+Timing Mode      : basic
+Setup            : WNS -4184ps  TNS   -34120ps  NUM_FEPS    15
+Hold             : WNS   471ps  TNS        0ps  NUM_FEPS     0
+
+RUN-1001 : Flow Statistics:
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :      command     |  #calls  |  wall time  |  cpu time(s)  |  used memory(mb)  |  peak memory(mb)  
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :   optimize_gate  |    1     |   6s(50%)   |    6(50%)     |        340        |        348        
+RUN-1001 :   optimize_rtl   |    1     |   6s(50%)   |    6(50%)     |        279        |        348        
+RUN-1001 :   import_device  |    1     |   0s(0%)    |     0(0%)     |        93         |        93         
+RUN-1001 :     read_adc     |    1     |   0s(0%)    |     0(0%)     |        155        |        155        
+RUN-1001 :     read_sdc     |    2     |   0s(0%)    |     0(0%)     |        155        |        155        
+RUN-1001 : --------------------------------------------------------------------------------------------------
+RUN-1001 :       total      |    6     |     12s     |      12       |        340        |        348        
+RUN-1001 : --------------------------------------------------------------------------------------------------

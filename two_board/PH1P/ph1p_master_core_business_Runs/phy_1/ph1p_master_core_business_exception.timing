@@ -1,0 +1,2314 @@
+Created by          : Tang Dynasty v6.2.168116
+                    : Copyright (c) 2012-2025 Anlogic Inc.
+Generated           : Sat Oct 31 00:30:40 2026
+
+Top Model           : top_ph1p_master
+Device              : PH1P35MDG324
+Speed               : 3
+STA coverage        : 97.19%
+Constraint File     : D:/Project/Anlogic/push/Eyetrack/two_board/PH1P/constraints/ph1p_business_cdc.sdc;D:/Project/Anlogic/push/Eyetrack/two_board/PH1P/constraints/ph1p_master.sdc;
+Confidence          : Routed
+Check Corner        : Both (Slow and Fast)
+CRPR Enabled        : Yes
+Report Scheme       : 10 end point(s) per path group, 1 path(s) per end point
+
+
+Check Status
+-------------
+
+Corner   | Max      Min     
+------------------------------------
+Slow     | yes      yes     
+Fast     | yes      yes     
+
+MCP/SMD Summary
+--------------------
+
+		Max Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+		         1            0            1            0   set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_request_toggle_app}] -to [get_regs {u_telemetry_tx/S_request_meta_cfg}] 42.000
+		         1            0            1            0   set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_ack_toggle_cfg}] -to [get_regs {u_telemetry_tx/S_ack_meta_app}] 13.333
+		        32            0           32            0   set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_cfg_hold*}] -to [get_regs {u_telemetry_tx/S_snapshot_ag* u_telemetry_tx/S_snapshot_ae*}] 13.333
+		         1            0            1            0   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[0]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[0]}] 13.333
+		         1            0            1            0   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[1]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[1]}] 13.333
+		         1            0            1            0   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[2]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[2]}] 13.333
+		         1            0            1            0   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[3]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[3]}] 13.333
+		         1            0            1            0   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[5]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[5]}] 13.333
+		         1            0            1            0   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[6]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[6]}] 13.333
+		         1            0            1            0   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[9]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[9]}] 13.333
+		         1            0            1            0   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_req_24m}] -to [get_regs {u_vehicle_controls/S_snapshot_req_pix_1}] 13.333
+		         1            0            1            0   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_ack_pix}] -to [get_regs {u_vehicle_controls/S_snapshot_ack_meta_24m}] 41.666
+		         1            0            1            0   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_home_toggle_24m}] -to [get_regs {u_vehicle_controls/S_home_toggle_pix_1}] 13.333
+		         1            0            1            0   set_max_delay -datapath_only -from [get_regs {u_display_controls/S_ack_pix}] -to [get_regs {u_display_controls/S_ack_meta_24m}] 41.666
+		        54           54            0            0   set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+		        11           11            0            0   set_max_delay -from [get_clocks {HDMI_PIXEL_CLK}] -to [get_clocks {pll_clk_24m}] -datapath_only 41.666
+		        18            0            0           18   set_max_delay -from [get_regs -nowarn {*/primary_addr_gray_reg[*]}] -to [get_regs -nowarn {*/sync_r1[*]}] -datapath_only 9.360
+		        18            0            0           18   set_max_delay -from [get_regs -nowarn {*/primary_addr_gray_reg[*]}] -to [get_regs -nowarn {*/sync_r1[*]}] -datapath_only 13.033
+
+		Min Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+
+Status of timing exceptions
+--------------------------------------------------
+
+MCP/SMD Details
+--------------------
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_request_toggle_app}] -to [get_regs {u_telemetry_tx/S_request_meta_cfg}] 42.000
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            1
+Dominated      :            0,          0.0%
+Shadowed       :            1,        100.0%
+               :            1, by set_max_delay -from [get_clocks {HDMI_PIXEL_CLK}] -to [get_clocks {pll_clk_24m}] -datapath_only 41.666
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_ack_toggle_cfg}] -to [get_regs {u_telemetry_tx/S_ack_meta_app}] 13.333
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            1
+Dominated      :            0,          0.0%
+Shadowed       :            1,        100.0%
+               :            1, by set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_cfg_hold*}] -to [get_regs {u_telemetry_tx/S_snapshot_ag* u_telemetry_tx/S_snapshot_ae*}] 13.333
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :           32
+Dominated      :            0,          0.0%
+Shadowed       :           32,        100.0%
+               :           32, by set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[0]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[0]}] 13.333
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            1
+Dominated      :            0,          0.0%
+Shadowed       :            1,        100.0%
+               :            1, by set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[1]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[1]}] 13.333
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            1
+Dominated      :            0,          0.0%
+Shadowed       :            1,        100.0%
+               :            1, by set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[2]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[2]}] 13.333
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            1
+Dominated      :            0,          0.0%
+Shadowed       :            1,        100.0%
+               :            1, by set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[3]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[3]}] 13.333
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            1
+Dominated      :            0,          0.0%
+Shadowed       :            1,        100.0%
+               :            1, by set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[5]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[5]}] 13.333
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            1
+Dominated      :            0,          0.0%
+Shadowed       :            1,        100.0%
+               :            1, by set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[6]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[6]}] 13.333
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            1
+Dominated      :            0,          0.0%
+Shadowed       :            1,        100.0%
+               :            1, by set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[9]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[9]}] 13.333
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            1
+Dominated      :            0,          0.0%
+Shadowed       :            1,        100.0%
+               :            1, by set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_req_24m}] -to [get_regs {u_vehicle_controls/S_snapshot_req_pix_1}] 13.333
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            1
+Dominated      :            0,          0.0%
+Shadowed       :            1,        100.0%
+               :            1, by set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_ack_pix}] -to [get_regs {u_vehicle_controls/S_snapshot_ack_meta_24m}] 41.666
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            1
+Dominated      :            0,          0.0%
+Shadowed       :            1,        100.0%
+               :            1, by set_max_delay -from [get_clocks {HDMI_PIXEL_CLK}] -to [get_clocks {pll_clk_24m}] -datapath_only 41.666
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_home_toggle_24m}] -to [get_regs {u_vehicle_controls/S_home_toggle_pix_1}] 13.333
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            1
+Dominated      :            0,          0.0%
+Shadowed       :            1,        100.0%
+               :            1, by set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_regs {u_display_controls/S_ack_pix}] -to [get_regs {u_display_controls/S_ack_meta_24m}] 41.666
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            1
+Dominated      :            0,          0.0%
+Shadowed       :            1,        100.0%
+               :            1, by set_max_delay -from [get_clocks {HDMI_PIXEL_CLK}] -to [get_clocks {pll_clk_24m}] -datapath_only 41.666
+
+
+Constraint     :   set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :           54
+Dominated      :           54,        100.0%
+
+
+Constraint     :   set_max_delay -from [get_clocks {HDMI_PIXEL_CLK}] -to [get_clocks {pll_clk_24m}] -datapath_only 41.666
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :           11
+Dominated      :           11,        100.0%
+
+
+Constraint     :   set_max_delay -from [get_regs -nowarn {*/primary_addr_gray_reg[*]}] -to [get_regs -nowarn {*/sync_r1[*]}] -datapath_only 9.360
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :           18
+Dominated      :            0,          0.0%
+Ignored        :           18,        100.0%
+               :           18, by set_clock_groups
+
+
+Constraint     :   set_max_delay -from [get_regs -nowarn {*/primary_addr_gray_reg[*]}] -to [get_regs -nowarn {*/sync_r1[*]}] -datapath_only 13.033
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :           18
+Dominated      :            0,          0.0%
+Ignored        :           18,        100.0%
+               :           18, by set_clock_groups
+
+
+Details on timing exceptions
+--------------------------------------------------
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_request_toggle_app}] -to [get_regs {u_telemetry_tx/S_request_meta_cfg}] 42.000
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_request_toggle_app}] -to [get_regs {u_telemetry_tx/S_request_meta_cfg}] 42.000
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_request_toggle_app}] -to [get_regs {u_telemetry_tx/S_request_meta_cfg}] 42.000
+
+Statistics:
+	Setup Check    :              1   end points,               1   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_telemetry_tx/S_state_reg[2]_syn_19.clk(triggered by clock HDMI_PIXEL_CLK)
+End Point           : u_telemetry_tx/S_request_meta_cfg_reg_syn_3.ima(triggered by clock pll_clk_24m)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x013y006z2                                        pin: u_telemetry_tx/S_state_reg[2]_syn_19.oqa
+net (fo=2)                                                            net: u_telemetry_tx/S_request_toggle_app,  ../../rtl/ctl/ctl_telemetry_tx.v(48)
+                                                                      pin: u_telemetry_tx/S_request_meta_cfg_reg_syn_3.ima
+reg                 x014y005z6                                        net: u_telemetry_tx/S_request_meta_cfg,  ../../rtl/ctl/ctl_telemetry_tx.v(49)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_ack_toggle_cfg}] -to [get_regs {u_telemetry_tx/S_ack_meta_app}] 13.333
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_ack_toggle_cfg}] -to [get_regs {u_telemetry_tx/S_ack_meta_app}] 13.333
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_ack_toggle_cfg}] -to [get_regs {u_telemetry_tx/S_ack_meta_app}] 13.333
+
+Statistics:
+	Setup Check    :              1   end points,               1   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_telemetry_tx/S_ack_toggle_cfg_reg_syn_3.clk(triggered by clock pll_clk_24m)
+End Point           : u_telemetry_tx/S_ack_sync_app_reg_syn_3.imb(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x012y006z3                                        pin: u_telemetry_tx/S_ack_toggle_cfg_reg_syn_3.oqa
+net (fo=2)                                                            net: u_telemetry_tx/S_ack_toggle_cfg,  ../../rtl/ctl/ctl_telemetry_tx.v(52)
+                                                                      pin: u_telemetry_tx/S_ack_sync_app_reg_syn_3.imb
+reg                 x013y006z1                                        net: u_telemetry_tx/S_ack_meta_app,  ../../rtl/ctl/ctl_telemetry_tx.v(53)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_cfg_hold*}] -to [get_regs {u_telemetry_tx/S_snapshot_ag* u_telemetry_tx/S_snapshot_ae*}] 13.333
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_cfg_hold*}] -to [get_regs {u_telemetry_tx/S_snapshot_ag* u_telemetry_tx/S_snapshot_ae*}] 13.333
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_telemetry_tx/S_cfg_hold*}] -to [get_regs {u_telemetry_tx/S_snapshot_ag* u_telemetry_tx/S_snapshot_ae*}] 13.333
+
+Statistics:
+	Setup Check    :             32   end points,              32   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[9]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_telemetry_tx/S_snapshot_ae_reg[5]_syn_2.imb(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x012y007z4                                        pin: u_telemetry_tx/S_cfg_hold_reg[9]_syn_2.oqb
+net (fo=1)                                                            net: u_telemetry_tx/S_cfg_hold[1],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_ae_reg[5]_syn_2.imb
+reg                 x015y008z4                                        net: u_telemetry_tx/S_snapshot_ae[1],  ../../rtl/ctl/ctl_telemetry_tx.v(67)
+
+
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[17]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_telemetry_tx/S_snapshot_ag_reg[1]_syn_2.ima(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x013y005z4                                        pin: u_telemetry_tx/S_cfg_hold_reg[17]_syn_2.oqa
+net (fo=1)                                                            net: u_telemetry_tx/S_cfg_hold[17],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_ag_reg[1]_syn_2.ima
+reg                 x013y006z4                                        net: u_telemetry_tx/S_snapshot_ag[1],  ../../rtl/ctl/ctl_telemetry_tx.v(66)
+
+
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[17]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_telemetry_tx/S_snapshot_ag_reg[1]_syn_2.imb(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x013y005z4                                        pin: u_telemetry_tx/S_cfg_hold_reg[17]_syn_2.oqb
+net (fo=1)                                                            net: u_telemetry_tx/S_cfg_hold[16],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_ag_reg[1]_syn_2.imb
+reg                 x013y006z4                                        net: u_telemetry_tx/S_snapshot_ag[0],  ../../rtl/ctl/ctl_telemetry_tx.v(66)
+
+
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[27]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_telemetry_tx/S_snapshot_speed_reg[17]_syn_2.imb(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x015y005z7                                        pin: u_telemetry_tx/S_cfg_hold_reg[27]_syn_2.oqb
+net (fo=1)                                                            net: u_telemetry_tx/S_cfg_hold[12],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_speed_reg[17]_syn_2.imb
+reg                 x015y008z7                                        net: u_telemetry_tx/S_snapshot_ae[12],  ../../rtl/ctl/ctl_telemetry_tx.v(67)
+
+
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[19]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_telemetry_tx/S_snapshot_ag_reg[3]_syn_2.ima(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x013y005z7                                        pin: u_telemetry_tx/S_cfg_hold_reg[19]_syn_2.oqa
+net (fo=1)                                                            net: u_telemetry_tx/S_cfg_hold[19],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_ag_reg[3]_syn_2.ima
+reg                 x014y006z1                                        net: u_telemetry_tx/S_snapshot_ag[3],  ../../rtl/ctl/ctl_telemetry_tx.v(66)
+
+
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[29]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_telemetry_tx/S_snapshot_speed_reg[16]_syn_2.imb(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x013y008z2                                        pin: u_telemetry_tx/S_cfg_hold_reg[29]_syn_2.oqb
+net (fo=1)                                                            net: u_telemetry_tx/S_cfg_hold[11],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_speed_reg[16]_syn_2.imb
+reg                 x015y006z6                                        net: u_telemetry_tx/S_snapshot_ae[11],  ../../rtl/ctl/ctl_telemetry_tx.v(67)
+
+
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[23]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_telemetry_tx/S_snapshot_metrics_state_reg[6]_syn_2.imb(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x013y005z6                                        pin: u_telemetry_tx/S_cfg_hold_reg[23]_syn_2.oqa
+net (fo=1)                                                            net: u_telemetry_tx/S_cfg_hold[23],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_metrics_state_reg[6]_syn_2.imb
+reg                 x014y006z6                                        net: u_telemetry_tx/S_snapshot_ag[7],  ../../rtl/ctl/ctl_telemetry_tx.v(66)
+
+
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[19]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_telemetry_tx/S_snapshot_ag_reg[3]_syn_2.imb(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x013y005z7                                        pin: u_telemetry_tx/S_cfg_hold_reg[19]_syn_2.oqb
+net (fo=1)                                                            net: u_telemetry_tx/S_cfg_hold[18],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_ag_reg[3]_syn_2.imb
+reg                 x014y006z1                                        net: u_telemetry_tx/S_snapshot_ag[2],  ../../rtl/ctl/ctl_telemetry_tx.v(66)
+
+
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[15]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_telemetry_tx/S_snapshot_ae_reg[13]_syn_2.ima(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x013y008z3                                        pin: u_telemetry_tx/S_cfg_hold_reg[15]_syn_2.oqb
+net (fo=1)                                                            net: u_telemetry_tx/S_cfg_hold[13],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_ae_reg[13]_syn_2.ima
+reg                 x014y006z5                                        net: u_telemetry_tx/S_snapshot_ae[13],  ../../rtl/ctl/ctl_telemetry_tx.v(67)
+
+
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[3]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_telemetry_tx/S_snapshot_ae_reg[13]_syn_2.imb(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x013y005z5                                        pin: u_telemetry_tx/S_cfg_hold_reg[3]_syn_2.oqb
+net (fo=1)                                                            net: u_telemetry_tx/S_cfg_hold[10],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_ae_reg[13]_syn_2.imb
+reg                 x014y006z5                                        net: u_telemetry_tx/S_snapshot_ae[10],  ../../rtl/ctl/ctl_telemetry_tx.v(67)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[0]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[0]}] 13.333
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[0]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[0]}] 13.333
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[0]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[0]}] 13.333
+
+Statistics:
+	Setup Check    :              1   end points,               1   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_vehicle_controls/S_snapshot_hold_24m_reg[0]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_vehicle_controls/S_snapshot_req_pix_2_reg_syn_3.id(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x021y015z6                                        pin: u_vehicle_controls/S_snapshot_hold_24m_reg[0]_syn_2.oqa
+net (fo=2)                                                            net: u_vehicle_controls/S_snapshot_hold_24m[0],  ../../rtl/ctl/ctl_vehicle_controls.v(332)
+                                                                      pin: u_vehicle_controls/S_snapshot_req_pix_2_reg_syn_3.id
+LUT4 (reg)          x021y016z3                                        net: u_vehicle_controls/S_snapshot_pending_pix[0],  ../../rtl/ctl/ctl_vehicle_controls.v(362)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[1]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[1]}] 13.333
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[1]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[1]}] 13.333
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[1]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[1]}] 13.333
+
+Statistics:
+	Setup Check    :              1   end points,               1   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_vehicle_controls/S_snapshot_hold_24m_reg[1]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_vehicle_controls/S_snapshot_pending_valid_pix_reg_syn_6.imb(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x022y019z7                                        pin: u_vehicle_controls/S_snapshot_hold_24m_reg[1]_syn_2.oqa
+net (fo=2)                                                            net: u_vehicle_controls/S_snapshot_hold_24m[1],  ../../rtl/ctl/ctl_vehicle_controls.v(332)
+                                                                      pin: u_vehicle_controls/S_snapshot_pending_valid_pix_reg_syn_6.imb
+LUT4 (reg)          x022y016z2                                        net: u_vehicle_controls/S_snapshot_pending_pix[1],  ../../rtl/ctl/ctl_vehicle_controls.v(362)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[2]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[2]}] 13.333
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[2]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[2]}] 13.333
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[2]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[2]}] 13.333
+
+Statistics:
+	Setup Check    :              1   end points,               1   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_vehicle_controls/S_snapshot_hold_24m_reg[3]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_vehicle_controls/S_snapshot_req_pix_1_reg_syn_3.id(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x020y016z4                                        pin: u_vehicle_controls/S_snapshot_hold_24m_reg[3]_syn_2.oqa
+net (fo=2)                                                            net: u_vehicle_controls/S_snapshot_hold_24m[2],  ../../rtl/ctl/ctl_vehicle_controls.v(332)
+                                                                      pin: u_vehicle_controls/S_snapshot_req_pix_1_reg_syn_3.id
+LUT4 (reg)          x021y016z0                                        net: u_vehicle_controls/S_snapshot_pending_pix[2],  ../../rtl/ctl/ctl_vehicle_controls.v(362)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[3]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[3]}] 13.333
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[3]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[3]}] 13.333
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[3]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[3]}] 13.333
+
+Statistics:
+	Setup Check    :              1   end points,               1   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_vehicle_controls/S_snapshot_hold_24m_reg[3]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_vehicle_controls/S_snapshot_pending_pix_reg[3]_syn_5.id(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x020y016z4                                        pin: u_vehicle_controls/S_snapshot_hold_24m_reg[3]_syn_2.oqb
+net (fo=2)                                                            net: u_vehicle_controls/S_snapshot_hold_24m[3],  ../../rtl/ctl/ctl_vehicle_controls.v(332)
+                                                                      pin: u_vehicle_controls/S_snapshot_pending_pix_reg[3]_syn_5.id
+LUT4 (reg)          x021y016z2                                        net: u_vehicle_controls/S_snapshot_pending_pix[3],  ../../rtl/ctl/ctl_vehicle_controls.v(362)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[5]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[5]}] 13.333
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[5]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[5]}] 13.333
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[5]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[5]}] 13.333
+
+Statistics:
+	Setup Check    :              1   end points,               1   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_vehicle_controls/S_snapshot_hold_24m_reg[5]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_vehicle_controls/S_snapshot_pending_pix_reg[9]_syn_5.id(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x022y018z0                                        pin: u_vehicle_controls/S_snapshot_hold_24m_reg[5]_syn_2.oqa
+net (fo=2)                                                            net: u_vehicle_controls/S_snapshot_hold_24m[5],  ../../rtl/ctl/ctl_vehicle_controls.v(332)
+                                                                      pin: u_vehicle_controls/S_snapshot_pending_pix_reg[9]_syn_5.id
+LUT4 (reg)          x022y016z0                                        net: u_vehicle_controls/S_snapshot_pending_pix[5],  ../../rtl/ctl/ctl_vehicle_controls.v(362)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[6]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[6]}] 13.333
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[6]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[6]}] 13.333
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[6]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[6]}] 13.333
+
+Statistics:
+	Setup Check    :              1   end points,               1   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_vehicle_controls/S_snapshot_hold_24m_reg[7]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_vehicle_controls/S_snapshot_pending_pix_reg[6]_syn_5.id(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x022y020z5                                        pin: u_vehicle_controls/S_snapshot_hold_24m_reg[7]_syn_2.oqa
+net (fo=2)                                                            net: u_vehicle_controls/S_snapshot_hold_24m[6],  ../../rtl/ctl/ctl_vehicle_controls.v(332)
+                                                                      pin: u_vehicle_controls/S_snapshot_pending_pix_reg[6]_syn_5.id
+LUT4 (reg)          x022y017z5                                        net: u_vehicle_controls/S_snapshot_pending_pix[6],  ../../rtl/ctl/ctl_vehicle_controls.v(362)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[9]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[9]}] 13.333
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[9]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[9]}] 13.333
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_hold_24m[9]}] -to [get_regs {u_vehicle_controls/S_snapshot_pending_pix[9]}] 13.333
+
+Statistics:
+	Setup Check    :              1   end points,               1   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_vehicle_controls/S_snapshot_hold_24m_reg[9]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_vehicle_controls/S_snapshot_pending_pix_reg[9]_syn_5.imb(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x021y018z7                                        pin: u_vehicle_controls/S_snapshot_hold_24m_reg[9]_syn_2.oqb
+net (fo=2)                                                            net: u_vehicle_controls/S_snapshot_hold_24m[9],  ../../rtl/ctl/ctl_vehicle_controls.v(332)
+                                                                      pin: u_vehicle_controls/S_snapshot_pending_pix_reg[9]_syn_5.imb
+LUT4 (reg)          x022y016z0                                        net: u_vehicle_controls/S_snapshot_pending_pix[9],  ../../rtl/ctl/ctl_vehicle_controls.v(362)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_req_24m}] -to [get_regs {u_vehicle_controls/S_snapshot_req_pix_1}] 13.333
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_req_24m}] -to [get_regs {u_vehicle_controls/S_snapshot_req_pix_1}] 13.333
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_req_24m}] -to [get_regs {u_vehicle_controls/S_snapshot_req_pix_1}] 13.333
+
+Statistics:
+	Setup Check    :              1   end points,               1   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_vehicle_controls/S_snapshot_hold_24m_reg[9]_syn_2.clk(triggered by clock pll_clk_24m)
+End Point           : u_vehicle_controls/S_snapshot_req_pix_1_reg_syn_3.imb(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x021y018z7                                        pin: u_vehicle_controls/S_snapshot_hold_24m_reg[9]_syn_2.oqa
+net (fo=3)                                                            net: u_vehicle_controls/S_snapshot_req_24m,  ../../rtl/ctl/ctl_vehicle_controls.v(333)
+                                                                      pin: u_vehicle_controls/S_snapshot_req_pix_1_reg_syn_3.imb
+reg                 x021y016z0                                        net: u_vehicle_controls/S_snapshot_req_pix_1,  ../../rtl/ctl/ctl_vehicle_controls.v(364)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_ack_pix}] -to [get_regs {u_vehicle_controls/S_snapshot_ack_meta_24m}] 41.666
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_ack_pix}] -to [get_regs {u_vehicle_controls/S_snapshot_ack_meta_24m}] 41.666
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_snapshot_ack_pix}] -to [get_regs {u_vehicle_controls/S_snapshot_ack_meta_24m}] 41.666
+
+Statistics:
+	Setup Check    :              1   end points,               1   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_vehicle_controls/S_snapshot_ack_pix_reg_syn_3.clk(triggered by clock HDMI_PIXEL_CLK)
+End Point           : u_vehicle_controls/S_snapshot_ack_meta_24m_reg_syn_3.ima(triggered by clock pll_clk_24m)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x022y016z4                                        pin: u_vehicle_controls/S_snapshot_ack_pix_reg_syn_3.oqb
+net (fo=7)                                                            net: u_vehicle_controls/S_snapshot_ack_pix,  ../../rtl/ctl/ctl_vehicle_controls.v(336)
+                                                                      pin: u_vehicle_controls/S_snapshot_ack_meta_24m_reg_syn_3.ima
+reg                 x020y017z1                                        net: u_vehicle_controls/S_snapshot_ack_meta_24m,  ../../rtl/ctl/ctl_vehicle_controls.v(334)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_home_toggle_24m}] -to [get_regs {u_vehicle_controls/S_home_toggle_pix_1}] 13.333
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_home_toggle_24m}] -to [get_regs {u_vehicle_controls/S_home_toggle_pix_1}] 13.333
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_vehicle_controls/S_home_toggle_24m}] -to [get_regs {u_vehicle_controls/S_home_toggle_pix_1}] 13.333
+
+Statistics:
+	Setup Check    :              1   end points,               1   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_vehicle_controls/S_home_toggle_24m_reg_syn_6.clk(triggered by clock pll_clk_24m)
+End Point           : u_vehicle_controls/O_gimbal_home_reg_syn_3.imb(triggered by clock HDMI_PIXEL_CLK)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x021y020z4                                        pin: u_vehicle_controls/S_home_toggle_24m_reg_syn_6.oqa
+net (fo=2)                                                            net: u_vehicle_controls/S_home_toggle_24m,  ../../rtl/ctl/ctl_vehicle_controls.v(269)
+                                                                      pin: u_vehicle_controls/O_gimbal_home_reg_syn_3.imb
+reg                 x022y017z6                                        net: u_vehicle_controls/S_home_toggle_pix_1,  ../../rtl/ctl/ctl_vehicle_controls.v(366)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -datapath_only -from [get_regs {u_display_controls/S_ack_pix}] -to [get_regs {u_display_controls/S_ack_meta_24m}] 41.666
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -datapath_only -from [get_regs {u_display_controls/S_ack_pix}] -to [get_regs {u_display_controls/S_ack_meta_24m}] 41.666
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      0.000ns, STNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     Set Max Delay (Shadowed)
+Constr         :     set_max_delay -datapath_only -from [get_regs {u_display_controls/S_ack_pix}] -to [get_regs {u_display_controls/S_ack_meta_24m}] 41.666
+
+Statistics:
+	Setup Check    :              1   end points,               1   paths
+----------------------------------------------------------------------------------------------------
+
+Max Delay Paths
+----------------------------------------------------------------------------------------------------
+Begin Point         : u_display_controls/S_request_meta_pix_reg_syn_3.clk(triggered by clock HDMI_PIXEL_CLK)
+End Point           : u_display_controls/S_ack_meta_24m_reg_syn_3.ima(triggered by clock pll_clk_24m)
+Check Type          : setup
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+clk2q               x039y041z5                                        pin: u_display_controls/S_request_meta_pix_reg_syn_3.oqb
+net (fo=2)                                                            net: u_display_controls/S_ack_pix,  ../../rtl/ctl/ctl_display_control_snapshot.v(29)
+                                                                      pin: u_display_controls/S_ack_meta_24m_reg_syn_3.ima
+reg                 x039y042z4                                        net: u_display_controls/S_ack_meta_24m,  ../../rtl/ctl/ctl_display_control_snapshot.v(25)
+
+
+
+
+
+Timing details for constraint:
+	set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -from [get_clocks {pll_clk_24m}] -to [get_clocks {HDMI_PIXEL_CLK}] -datapath_only 10.000
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      8.597ns, STNS      0.000ns,         0 Viol Endpoints,        54 Total Endpoints,        54 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 8.597ns
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[30]_syn_2.clk (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+End Point           : u_telemetry_tx/S_snapshot_ag_reg[15]_syn_2.imb (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 10.000ns { HDMI_PIXEL_CLK rising@0.000ns - pll_clk_24m rising@0.000ns }
+Data Path Delay     : 1.339ns (cell 0.204ns (15%), net 1.135ns (85%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkin
+SCLK                x023y019z4          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkout
+net (fo=192)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_cfg_hold_reg[30]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x015y005z4          0.126    f     0.126          pin: u_telemetry_tx/S_cfg_hold_reg[30]_syn_2.oqa
+net (fo=1)                              1.135          1.261          net: u_telemetry_tx/S_cfg_hold[30],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_ag_reg[15]_syn_2.imb
+reg                 x015y005z1          0.078    r     1.339          net: u_telemetry_tx/S_snapshot_ag[14],  ../../rtl/ctl/ctl_telemetry_tx.v(66)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.339               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkin
+SCLK                x023y019z2          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkout
+net (fo=1383)                           0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_snapshot_ag_reg[15]_syn_2.clk
+constraint delay                       10.000         10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064          9.936               
+clock uncertainty                       0.000          9.936               
+clock pessimism                         0.000          9.936               
+--------------------------------------------------------------------  ---------------
+Required                                               9.936               
+--------------------------------------------------------------------  ---------------
+Slack                                                  8.597               
+
+Slack               : 8.599ns
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[31]_syn_2.clk (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+End Point           : u_telemetry_tx/S_snapshot_ag_reg[15]_syn_2.ima (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 10.000ns { HDMI_PIXEL_CLK rising@0.000ns - pll_clk_24m rising@0.000ns }
+Data Path Delay     : 1.337ns (cell 0.213ns (15%), net 1.124ns (85%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkin
+SCLK                x023y019z4          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkout
+net (fo=192)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_cfg_hold_reg[31]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x015y005z6          0.126    f     0.126          pin: u_telemetry_tx/S_cfg_hold_reg[31]_syn_2.oqa
+net (fo=1)                              1.124          1.250          net: u_telemetry_tx/S_cfg_hold[31],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_ag_reg[15]_syn_2.ima
+reg                 x015y005z1          0.087    r     1.337          net: u_telemetry_tx/S_snapshot_ag[15],  ../../rtl/ctl/ctl_telemetry_tx.v(66)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.337               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkin
+SCLK                x023y019z2          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkout
+net (fo=1383)                           0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_snapshot_ag_reg[15]_syn_2.clk
+constraint delay                       10.000         10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064          9.936               
+clock uncertainty                       0.000          9.936               
+clock pessimism                         0.000          9.936               
+--------------------------------------------------------------------  ---------------
+Required                                               9.936               
+--------------------------------------------------------------------  ---------------
+Slack                                                  8.599               
+
+Slack               : 8.661ns
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[20]_syn_2.clk (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+End Point           : u_telemetry_tx/S_snapshot_ag_reg[6]_syn_2.ima (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 10.000ns { HDMI_PIXEL_CLK rising@0.000ns - pll_clk_24m rising@0.000ns }
+Data Path Delay     : 1.275ns (cell 0.224ns (17%), net 1.051ns (83%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkin
+SCLK                x023y019z4          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkout
+net (fo=192)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_cfg_hold_reg[20]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x013y008z0          0.137    r     0.137          pin: u_telemetry_tx/S_cfg_hold_reg[20]_syn_2.oqb
+net (fo=1)                              1.051          1.188          net: u_telemetry_tx/S_cfg_hold[22],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_ag_reg[6]_syn_2.ima
+reg                 x013y006z6          0.087    r     1.275          net: u_telemetry_tx/S_snapshot_ag[6],  ../../rtl/ctl/ctl_telemetry_tx.v(66)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.275               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkin
+SCLK                x023y019z2          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkout
+net (fo=1383)                           0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_snapshot_ag_reg[6]_syn_2.clk
+constraint delay                       10.000         10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064          9.936               
+clock uncertainty                       0.000          9.936               
+clock pessimism                         0.000          9.936               
+--------------------------------------------------------------------  ---------------
+Required                                               9.936               
+--------------------------------------------------------------------  ---------------
+Slack                                                  8.661               
+
+Slack               : 8.697ns
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[15]_syn_2.clk (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+End Point           : u_telemetry_tx/S_snapshot_ae_reg[13]_syn_2.ima (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 10.000ns { HDMI_PIXEL_CLK rising@0.000ns - pll_clk_24m rising@0.000ns }
+Data Path Delay     : 1.239ns (cell 0.224ns (18%), net 1.015ns (82%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkin
+SCLK                x023y019z4          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkout
+net (fo=192)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_cfg_hold_reg[15]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x013y008z3          0.137    r     0.137          pin: u_telemetry_tx/S_cfg_hold_reg[15]_syn_2.oqb
+net (fo=1)                              1.015          1.152          net: u_telemetry_tx/S_cfg_hold[13],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_ae_reg[13]_syn_2.ima
+reg                 x014y006z5          0.087    r     1.239          net: u_telemetry_tx/S_snapshot_ae[13],  ../../rtl/ctl/ctl_telemetry_tx.v(67)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.239               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkin
+SCLK                x023y019z2          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkout
+net (fo=1383)                           0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_snapshot_ae_reg[13]_syn_2.clk
+constraint delay                       10.000         10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064          9.936               
+clock uncertainty                       0.000          9.936               
+clock pessimism                         0.000          9.936               
+--------------------------------------------------------------------  ---------------
+Required                                               9.936               
+--------------------------------------------------------------------  ---------------
+Slack                                                  8.697               
+
+Slack               : 8.809ns
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[3]_syn_2.clk (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+End Point           : u_telemetry_tx/S_snapshot_ae_reg[13]_syn_2.imb (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 10.000ns { HDMI_PIXEL_CLK rising@0.000ns - pll_clk_24m rising@0.000ns }
+Data Path Delay     : 1.127ns (cell 0.215ns (19%), net 0.912ns (81%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkin
+SCLK                x023y019z4          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkout
+net (fo=192)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_cfg_hold_reg[3]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x013y005z5          0.137    r     0.137          pin: u_telemetry_tx/S_cfg_hold_reg[3]_syn_2.oqb
+net (fo=1)                              0.912          1.049          net: u_telemetry_tx/S_cfg_hold[10],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_ae_reg[13]_syn_2.imb
+reg                 x014y006z5          0.078    r     1.127          net: u_telemetry_tx/S_snapshot_ae[10],  ../../rtl/ctl/ctl_telemetry_tx.v(67)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.127               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkin
+SCLK                x023y019z2          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkout
+net (fo=1383)                           0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_snapshot_ae_reg[13]_syn_2.clk
+constraint delay                       10.000         10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064          9.936               
+clock uncertainty                       0.000          9.936               
+clock pessimism                         0.000          9.936               
+--------------------------------------------------------------------  ---------------
+Required                                               9.936               
+--------------------------------------------------------------------  ---------------
+Slack                                                  8.809               
+
+Slack               : 8.810ns
+Begin Point         : u_vehicle_controls/S_snapshot_hold_24m_reg[9]_syn_2.clk (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+End Point           : u_vehicle_controls/S_snapshot_req_pix_1_reg_syn_3.imb (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 10.000ns { HDMI_PIXEL_CLK rising@0.000ns - pll_clk_24m rising@0.000ns }
+Data Path Delay     : 1.126ns (cell 0.204ns (18%), net 0.922ns (82%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 3
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkin
+SCLK                x023y019z4          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkout
+net (fo=192)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_vehicle_controls/S_snapshot_hold_24m_reg[9]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x021y018z7          0.126    f     0.126          pin: u_vehicle_controls/S_snapshot_hold_24m_reg[9]_syn_2.oqa
+net (fo=3)                              0.922          1.048          net: u_vehicle_controls/S_snapshot_req_24m,  ../../rtl/ctl/ctl_vehicle_controls.v(333)
+                                                                      pin: u_vehicle_controls/S_snapshot_req_pix_1_reg_syn_3.imb
+reg                 x021y016z0          0.078    r     1.126          net: u_vehicle_controls/S_snapshot_req_pix_1,  ../../rtl/ctl/ctl_vehicle_controls.v(364)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.126               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkin
+SCLK                x023y019z2          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkout
+net (fo=1383)                           0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_vehicle_controls/S_snapshot_req_pix_1_reg_syn_3.clk
+constraint delay                       10.000         10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064          9.936               
+clock uncertainty                       0.000          9.936               
+clock pessimism                         0.000          9.936               
+--------------------------------------------------------------------  ---------------
+Required                                               9.936               
+--------------------------------------------------------------------  ---------------
+Slack                                                  8.810               
+
+Slack               : 8.857ns
+Begin Point         : u_display_controls/S_hold_24m_reg[16]_syn_2.clk (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+End Point           : u_display_controls/S_request_meta_pix_reg_syn_3.ima (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 10.000ns { HDMI_PIXEL_CLK rising@0.000ns - pll_clk_24m rising@0.000ns }
+Data Path Delay     : 1.079ns (cell 0.213ns (19%), net 0.866ns (81%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 2
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_1_r_bk4.clkin
+SCLK                x023y059z15         0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_1_r_bk4.clkout
+net (fo=189)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_1_r_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_display_controls/S_hold_24m_reg[16]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x039y042z0          0.126    f     0.126          pin: u_display_controls/S_hold_24m_reg[16]_syn_2.oqa
+net (fo=2)                              0.866          0.992          net: u_display_controls/S_request_24m,  ../../rtl/ctl/ctl_display_control_snapshot.v(24)
+                                                                      pin: u_display_controls/S_request_meta_pix_reg_syn_3.ima
+reg                 x039y041z5          0.087    r     1.079          net: u_display_controls/S_request_meta_pix,  ../../rtl/ctl/ctl_display_control_snapshot.v(27)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.079               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_1_r_bk3.clkin
+SCLK                x023y059z14         0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_1_r_bk3.clkout
+net (fo=1892)                           0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_1_r_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_display_controls/S_request_meta_pix_reg_syn_3.clk
+constraint delay                       10.000         10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064          9.936               
+clock uncertainty                       0.000          9.936               
+clock pessimism                         0.000          9.936               
+--------------------------------------------------------------------  ---------------
+Required                                               9.936               
+--------------------------------------------------------------------  ---------------
+Slack                                                  8.857               
+
+Slack               : 8.858ns
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[14]_syn_2.clk (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+End Point           : u_telemetry_tx/S_snapshot_speed_reg[15]_syn_2.imb (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 10.000ns { HDMI_PIXEL_CLK rising@0.000ns - pll_clk_24m rising@0.000ns }
+Data Path Delay     : 1.078ns (cell 0.215ns (19%), net 0.863ns (81%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkin
+SCLK                x023y019z4          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkout
+net (fo=192)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_cfg_hold_reg[14]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x013y008z1          0.137    r     0.137          pin: u_telemetry_tx/S_cfg_hold_reg[14]_syn_2.oqb
+net (fo=1)                              0.863          1.000          net: u_telemetry_tx/S_cfg_hold[21],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_speed_reg[15]_syn_2.imb
+reg                 x013y006z7          0.078    r     1.078          net: u_telemetry_tx/S_snapshot_ag[5],  ../../rtl/ctl/ctl_telemetry_tx.v(66)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.078               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkin
+SCLK                x023y019z2          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkout
+net (fo=1383)                           0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_snapshot_speed_reg[15]_syn_2.clk
+constraint delay                       10.000         10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064          9.936               
+clock uncertainty                       0.000          9.936               
+clock pessimism                         0.000          9.936               
+--------------------------------------------------------------------  ---------------
+Required                                               9.936               
+--------------------------------------------------------------------  ---------------
+Slack                                                  8.858               
+
+Slack               : 8.869ns
+Begin Point         : u_telemetry_tx/S_cfg_hold_reg[9]_syn_2.clk (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+End Point           : u_telemetry_tx/S_snapshot_ae_reg[9]_syn_2.ima (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 10.000ns { HDMI_PIXEL_CLK rising@0.000ns - pll_clk_24m rising@0.000ns }
+Data Path Delay     : 1.067ns (cell 0.213ns (19%), net 0.854ns (81%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkin
+SCLK                x023y019z4          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkout
+net (fo=192)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_cfg_hold_reg[9]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x012y007z4          0.126    f     0.126          pin: u_telemetry_tx/S_cfg_hold_reg[9]_syn_2.oqa
+net (fo=1)                              0.854          0.980          net: u_telemetry_tx/S_cfg_hold[9],  ../../rtl/ctl/ctl_telemetry_tx.v(57)
+                                                                      pin: u_telemetry_tx/S_snapshot_ae_reg[9]_syn_2.ima
+reg                 x015y007z5          0.087    r     1.067          net: u_telemetry_tx/S_snapshot_ae[9],  ../../rtl/ctl/ctl_telemetry_tx.v(67)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.067               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkin
+SCLK                x023y019z2          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkout
+net (fo=1383)                           0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_snapshot_ae_reg[9]_syn_2.clk
+constraint delay                       10.000         10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064          9.936               
+clock uncertainty                       0.000          9.936               
+clock pessimism                         0.000          9.936               
+--------------------------------------------------------------------  ---------------
+Required                                               9.936               
+--------------------------------------------------------------------  ---------------
+Slack                                                  8.869               
+
+Slack               : 8.942ns
+Begin Point         : u_display_controls/S_hold_24m_reg[18]_syn_2.clk (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+End Point           : u_display_controls/S_pending_pix_reg[19]_syn_2.imb (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 10.000ns { HDMI_PIXEL_CLK rising@0.000ns - pll_clk_24m rising@0.000ns }
+Data Path Delay     : 0.994ns (cell 0.204ns (20%), net 0.790ns (80%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 2
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_1_r_bk4.clkin
+SCLK                x023y059z15         0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_1_r_bk4.clkout
+net (fo=189)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_1_r_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_display_controls/S_hold_24m_reg[18]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x039y042z1          0.126    f     0.126          pin: u_display_controls/S_hold_24m_reg[18]_syn_2.oqa
+net (fo=2)                              0.790          0.916          net: u_display_controls/S_hold_24m[18],  ../../rtl/ctl/ctl_display_control_snapshot.v(23)
+                                                                      pin: u_display_controls/S_pending_pix_reg[19]_syn_2.imb
+reg                 x036y043z1          0.078    r     0.994          net: u_display_controls/S_pending_pix[18],  ../../rtl/ctl/ctl_display_control_snapshot.v(30)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.994               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_1_r_bk3.clkin
+SCLK                x023y059z14         0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_1_r_bk3.clkout
+net (fo=1892)                           0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_1_r_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_display_controls/S_pending_pix_reg[19]_syn_2.clk
+constraint delay                       10.000         10.000               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064          9.936               
+clock uncertainty                       0.000          9.936               
+clock pessimism                         0.000          9.936               
+--------------------------------------------------------------------  ---------------
+Required                                               9.936               
+--------------------------------------------------------------------  ---------------
+Slack                                                  8.942               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+Timing details for constraint:
+	set_max_delay -from [get_clocks {HDMI_PIXEL_CLK}] -to [get_clocks {pll_clk_24m}] -datapath_only 41.666
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -from [get_clocks {HDMI_PIXEL_CLK}] -to [get_clocks {pll_clk_24m}] -datapath_only 41.666
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS     40.460ns, STNS      0.000ns,         0 Viol Endpoints,        11 Total Endpoints,        11 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 40.460ns
+Begin Point         : u_vehicle_controls/S_snapshot_ack_pix_reg_syn_3.clk (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+End Point           : u_vehicle_controls/S_snapshot_ack_meta_24m_reg_syn_3.ima (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 41.666ns { pll_clk_24m rising@0.000ns - HDMI_PIXEL_CLK rising@0.000ns }
+Data Path Delay     : 1.142ns (cell 0.224ns (19%), net 0.918ns (81%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 7
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkin
+SCLK                x023y019z2          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkout
+net (fo=1383)                           0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_vehicle_controls/S_snapshot_ack_pix_reg_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x022y016z4          0.137    r     0.137          pin: u_vehicle_controls/S_snapshot_ack_pix_reg_syn_3.oqb
+net (fo=7)                              0.918          1.055          net: u_vehicle_controls/S_snapshot_ack_pix,  ../../rtl/ctl/ctl_vehicle_controls.v(336)
+                                                                      pin: u_vehicle_controls/S_snapshot_ack_meta_24m_reg_syn_3.ima
+reg                 x020y017z1          0.087    r     1.142          net: u_vehicle_controls/S_snapshot_ack_meta_24m,  ../../rtl/ctl/ctl_vehicle_controls.v(334)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.142               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkin
+SCLK                x023y019z4          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkout
+net (fo=192)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_vehicle_controls/S_snapshot_ack_meta_24m_reg_syn_3.clk
+constraint delay                       41.666         41.666               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064         41.602               
+clock uncertainty                       0.000         41.602               
+clock pessimism                         0.000         41.602               
+--------------------------------------------------------------------  ---------------
+Required                                              41.602               
+--------------------------------------------------------------------  ---------------
+Slack                                                 40.460               
+
+Slack               : 40.516ns
+Begin Point         : u_telemetry_tx/S_state_reg[2]_syn_19.clk (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+End Point           : u_telemetry_tx/S_request_meta_cfg_reg_syn_3.ima (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 41.666ns { pll_clk_24m rising@0.000ns - HDMI_PIXEL_CLK rising@0.000ns }
+Data Path Delay     : 1.086ns (cell 0.213ns (19%), net 0.873ns (81%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 2
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkin
+SCLK                x023y019z2          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3.clkout
+net (fo=1383)                           0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_l_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_state_reg[2]_syn_19.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x013y006z2          0.126    f     0.126          pin: u_telemetry_tx/S_state_reg[2]_syn_19.oqa
+net (fo=2)                              0.873          0.999          net: u_telemetry_tx/S_request_toggle_app,  ../../rtl/ctl/ctl_telemetry_tx.v(48)
+                                                                      pin: u_telemetry_tx/S_request_meta_cfg_reg_syn_3.ima
+reg                 x014y005z6          0.087    r     1.086          net: u_telemetry_tx/S_request_meta_cfg,  ../../rtl/ctl/ctl_telemetry_tx.v(49)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.086               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkin
+SCLK                x023y019z4          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5.clkout
+net (fo=192)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_l_bk5_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_telemetry_tx/S_request_meta_cfg_reg_syn_3.clk
+constraint delay                       41.666         41.666               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064         41.602               
+clock uncertainty                       0.000         41.602               
+clock pessimism                         0.000         41.602               
+--------------------------------------------------------------------  ---------------
+Required                                              41.602               
+--------------------------------------------------------------------  ---------------
+Slack                                                 40.516               
+
+Slack               : 40.655ns
+Begin Point         : u_luma_stat/O_y_avg_reg[6]_syn_2.clk (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+End Point           : S_y_avg_meta_reg[6]_syn_2.ima (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 41.666ns { pll_clk_24m rising@0.000ns - HDMI_PIXEL_CLK rising@0.000ns }
+Data Path Delay     : 0.947ns (cell 0.213ns (22%), net 0.734ns (78%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkin
+SCLK                x023y019z13         0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkout
+net (fo=610)                            0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_luma_stat/O_y_avg_reg[6]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x039y022z7          0.126    f     0.126          pin: u_luma_stat/O_y_avg_reg[6]_syn_2.oqa
+net (fo=1)                              0.734          0.860          net: u_luma_stat/O_y_avg[6],  ../../rtl/dsp/dsp_luma_stat.v(37)
+                                                                      pin: S_y_avg_meta_reg[6]_syn_2.ima
+reg                 x039y024z1          0.087    r     0.947          net: S_y_avg_meta[6],  ../../rtl/top/top_ph1p_master.v(381)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.947               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkin
+SCLK                x023y019z15         0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkout
+net (fo=136)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: S_y_avg_meta_reg[6]_syn_2.clk
+constraint delay                       41.666         41.666               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064         41.602               
+clock uncertainty                       0.000         41.602               
+clock pessimism                         0.000         41.602               
+--------------------------------------------------------------------  ---------------
+Required                                              41.602               
+--------------------------------------------------------------------  ---------------
+Slack                                                 40.655               
+
+Slack               : 40.801ns
+Begin Point         : u_luma_stat/O_y_avg_reg[7]_syn_2.clk (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+End Point           : S_y_avg_meta_reg[4]_syn_2.imb (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 41.666ns { pll_clk_24m rising@0.000ns - HDMI_PIXEL_CLK rising@0.000ns }
+Data Path Delay     : 0.801ns (cell 0.215ns (26%), net 0.586ns (74%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkin
+SCLK                x023y019z13         0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkout
+net (fo=610)                            0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_luma_stat/O_y_avg_reg[7]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x041y027z0          0.137    r     0.137          pin: u_luma_stat/O_y_avg_reg[7]_syn_2.oqb
+net (fo=1)                              0.586          0.723          net: u_luma_stat/O_y_avg[3],  ../../rtl/dsp/dsp_luma_stat.v(37)
+                                                                      pin: S_y_avg_meta_reg[4]_syn_2.imb
+reg                 x040y024z7          0.078    r     0.801          net: S_y_avg_meta[3],  ../../rtl/top/top_ph1p_master.v(381)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.801               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkin
+SCLK                x023y019z15         0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkout
+net (fo=136)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: S_y_avg_meta_reg[4]_syn_2.clk
+constraint delay                       41.666         41.666               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064         41.602               
+clock uncertainty                       0.000         41.602               
+clock pessimism                         0.000         41.602               
+--------------------------------------------------------------------  ---------------
+Required                                              41.602               
+--------------------------------------------------------------------  ---------------
+Slack                                                 40.801               
+
+Slack               : 40.858ns
+Begin Point         : u_luma_stat/O_y_avg_reg[7]_syn_2.clk (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+End Point           : S_y_avg_meta_reg[7]_syn_2.ima (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 41.666ns { pll_clk_24m rising@0.000ns - HDMI_PIXEL_CLK rising@0.000ns }
+Data Path Delay     : 0.744ns (cell 0.213ns (28%), net 0.531ns (72%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkin
+SCLK                x023y019z13         0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkout
+net (fo=610)                            0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_luma_stat/O_y_avg_reg[7]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x041y027z0          0.126    f     0.126          pin: u_luma_stat/O_y_avg_reg[7]_syn_2.oqa
+net (fo=1)                              0.531          0.657          net: u_luma_stat/O_y_avg[7],  ../../rtl/dsp/dsp_luma_stat.v(37)
+                                                                      pin: S_y_avg_meta_reg[7]_syn_2.ima
+reg                 x040y023z3          0.087    r     0.744          net: S_y_avg_meta[7],  ../../rtl/top/top_ph1p_master.v(381)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.744               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkin
+SCLK                x023y019z15         0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkout
+net (fo=136)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: S_y_avg_meta_reg[7]_syn_2.clk
+constraint delay                       41.666         41.666               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064         41.602               
+clock uncertainty                       0.000         41.602               
+clock pessimism                         0.000         41.602               
+--------------------------------------------------------------------  ---------------
+Required                                              41.602               
+--------------------------------------------------------------------  ---------------
+Slack                                                 40.858               
+
+Slack               : 40.897ns
+Begin Point         : u_luma_stat/O_y_avg_reg[4]_syn_2.clk (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+End Point           : S_y_avg_24m_reg[1]_syn_2.imb (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 41.666ns { pll_clk_24m rising@0.000ns - HDMI_PIXEL_CLK rising@0.000ns }
+Data Path Delay     : 0.705ns (cell 0.215ns (30%), net 0.490ns (70%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkin
+SCLK                x023y019z13         0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkout
+net (fo=610)                            0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_luma_stat/O_y_avg_reg[4]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x039y022z5          0.137    r     0.137          pin: u_luma_stat/O_y_avg_reg[4]_syn_2.oqb
+net (fo=1)                              0.490          0.627          net: u_luma_stat/O_y_avg[0],  ../../rtl/dsp/dsp_luma_stat.v(37)
+                                                                      pin: S_y_avg_24m_reg[1]_syn_2.imb
+reg                 x040y023z0          0.078    r     0.705          net: S_y_avg_meta[0],  ../../rtl/top/top_ph1p_master.v(381)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.705               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkin
+SCLK                x023y019z15         0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkout
+net (fo=136)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: S_y_avg_24m_reg[1]_syn_2.clk
+constraint delay                       41.666         41.666               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064         41.602               
+clock uncertainty                       0.000         41.602               
+clock pessimism                         0.000         41.602               
+--------------------------------------------------------------------  ---------------
+Required                                              41.602               
+--------------------------------------------------------------------  ---------------
+Slack                                                 40.897               
+
+Slack               : 40.905ns
+Begin Point         : u_luma_stat/O_y_avg_reg[2]_syn_2.clk (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+End Point           : S_y_avg_meta_reg[7]_syn_2.imb (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 41.666ns { pll_clk_24m rising@0.000ns - HDMI_PIXEL_CLK rising@0.000ns }
+Data Path Delay     : 0.697ns (cell 0.215ns (30%), net 0.482ns (70%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkin
+SCLK                x023y019z13         0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkout
+net (fo=610)                            0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_luma_stat/O_y_avg_reg[2]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x039y022z4          0.137    r     0.137          pin: u_luma_stat/O_y_avg_reg[2]_syn_2.oqb
+net (fo=1)                              0.482          0.619          net: u_luma_stat/O_y_avg[1],  ../../rtl/dsp/dsp_luma_stat.v(37)
+                                                                      pin: S_y_avg_meta_reg[7]_syn_2.imb
+reg                 x040y023z3          0.078    r     0.697          net: S_y_avg_meta[1],  ../../rtl/top/top_ph1p_master.v(381)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.697               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkin
+SCLK                x023y019z15         0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkout
+net (fo=136)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: S_y_avg_meta_reg[7]_syn_2.clk
+constraint delay                       41.666         41.666               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064         41.602               
+clock uncertainty                       0.000         41.602               
+clock pessimism                         0.000         41.602               
+--------------------------------------------------------------------  ---------------
+Required                                              41.602               
+--------------------------------------------------------------------  ---------------
+Slack                                                 40.905               
+
+Slack               : 40.975ns
+Begin Point         : u_display_controls/S_request_meta_pix_reg_syn_3.clk (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+End Point           : u_display_controls/S_ack_meta_24m_reg_syn_3.ima (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 41.666ns { pll_clk_24m rising@0.000ns - HDMI_PIXEL_CLK rising@0.000ns }
+Data Path Delay     : 0.627ns (cell 0.224ns (35%), net 0.403ns (65%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 2
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_1_r_bk3.clkin
+SCLK                x023y059z14         0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_1_r_bk3.clkout
+net (fo=1892)                           0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_1_r_bk3_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_display_controls/S_request_meta_pix_reg_syn_3.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x039y041z5          0.137    r     0.137          pin: u_display_controls/S_request_meta_pix_reg_syn_3.oqb
+net (fo=2)                              0.403          0.540          net: u_display_controls/S_ack_pix,  ../../rtl/ctl/ctl_display_control_snapshot.v(29)
+                                                                      pin: u_display_controls/S_ack_meta_24m_reg_syn_3.ima
+reg                 x039y042z4          0.087    r     0.627          net: u_display_controls/S_ack_meta_24m,  ../../rtl/ctl/ctl_display_control_snapshot.v(25)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.627               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_1_r_bk4.clkin
+SCLK                x023y059z15         0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_1_r_bk4.clkout
+net (fo=189)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_1_r_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_display_controls/S_ack_meta_24m_reg_syn_3.clk
+constraint delay                       41.666         41.666               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064         41.602               
+clock uncertainty                       0.000         41.602               
+clock pessimism                         0.000         41.602               
+--------------------------------------------------------------------  ---------------
+Required                                              41.602               
+--------------------------------------------------------------------  ---------------
+Slack                                                 40.975               
+
+Slack               : 40.986ns
+Begin Point         : u_luma_stat/O_y_avg_reg[4]_syn_2.clk (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+End Point           : S_y_avg_meta_reg[4]_syn_2.ima (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 41.666ns { pll_clk_24m rising@0.000ns - HDMI_PIXEL_CLK rising@0.000ns }
+Data Path Delay     : 0.616ns (cell 0.213ns (34%), net 0.403ns (66%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkin
+SCLK                x023y019z13         0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkout
+net (fo=610)                            0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_luma_stat/O_y_avg_reg[4]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x039y022z5          0.126    f     0.126          pin: u_luma_stat/O_y_avg_reg[4]_syn_2.oqa
+net (fo=1)                              0.403          0.529          net: u_luma_stat/O_y_avg[4],  ../../rtl/dsp/dsp_luma_stat.v(37)
+                                                                      pin: S_y_avg_meta_reg[4]_syn_2.ima
+reg                 x040y024z7          0.087    r     0.616          net: S_y_avg_meta[4],  ../../rtl/top/top_ph1p_master.v(381)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.616               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkin
+SCLK                x023y019z15         0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkout
+net (fo=136)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: S_y_avg_meta_reg[4]_syn_2.clk
+constraint delay                       41.666         41.666               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064         41.602               
+clock uncertainty                       0.000         41.602               
+clock pessimism                         0.000         41.602               
+--------------------------------------------------------------------  ---------------
+Required                                              41.602               
+--------------------------------------------------------------------  ---------------
+Slack                                                 40.986               
+
+Slack               : 40.996ns
+Begin Point         : u_luma_stat/O_y_avg_reg[6]_syn_2.clk (rising edge triggered by clock HDMI_PIXEL_CLK  { rise@0.000000ns  fall@6.666000ns  period=13.333000 })
+End Point           : S_y_avg_meta_reg[5]_syn_2.ima (rising edge triggered by clock pll_clk_24m  { rise@0.000000ns  fall@21.000000ns  period=42.000000 })
+Check Type          : setup
+Process             : slow_m40c
+Budget              : 41.666ns { pll_clk_24m rising@0.000ns - HDMI_PIXEL_CLK rising@0.000ns }
+Data Path Delay     : 0.606ns (cell 0.224ns (36%), net 0.382ns (64%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.238ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[4]
+net (fo=1)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkin[0]
+GCLK                x023y039z0          0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_syn_659,  ../../rtl/dsp/dsp_camera_neighbourhood.v(170)
+                                                                      pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkin
+SCLK                x023y019z13         0.000          0.000          pin: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2.clkout
+net (fo=610)                            0.000          0.000          net: u_camera_modes/g_core_business$u_neighbourhood/I_clk_csi_created_gclkinst_auto_created_sclk_s_0_r_bk2_sclk_outnet,  NOFILE(0)
+                                                                      pin: u_luma_stat/O_y_avg_reg[6]_syn_2.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x039y022z7          0.137    r     0.137          pin: u_luma_stat/O_y_avg_reg[6]_syn_2.oqb
+net (fo=1)                              0.382          0.519          net: u_luma_stat/O_y_avg[5],  ../../rtl/dsp/dsp_luma_stat.v(37)
+                                                                      pin: S_y_avg_meta_reg[5]_syn_2.ima
+reg                 x040y024z5          0.087    r     0.606          net: S_y_avg_meta[5],  ../../rtl/top/top_ph1p_master.v(381)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.606               
+
+source latency                          0.000          0.000               
+port                C4                  0.000          0.000          pin: I_sys_clk
+hierarchy                               0.000          0.000          pin: I_sys_clk_syn_7.ipad
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.sg09_di
+HDIO                x033y078            0.000          0.000          pin: I_sys_clk_syn_7.di
+net (fo=5)          x000y039            0.000          0.000          net: I_sys_clk_dup_6,  ../../rtl/top/top_ph1p_master.v(13)
+                                                                      pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.refclk
+PLL                 x000y039            0.000          0.000          pin: u_PLL/ph1p_phy_pll_wrapper_25a56e5ce2f9_Inst/u_PH1P_PHY_PLL.clkc[1]
+net (fo=1)                              0.000          0.000          net: O_cam_24m_dup_1,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst.clkin[0]
+GCLK                x023y039z1          0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst.clkout
+net (fo=4)                              0.000          0.000          net: O_cam_24m_syn_3,  ../../rtl/top/top_ph1p_master.v(17)
+                                                                      pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkin
+SCLK                x023y019z15         0.000          0.000          pin: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4.clkout
+net (fo=136)                            0.000          0.000          net: O_cam_24m_dup_1_created_gclkinst_auto_created_sclk_s_0_r_bk4_sclk_outnet,  NOFILE(0)
+                                                                      pin: S_y_avg_meta_reg[5]_syn_2.clk
+constraint delay                       41.666         41.666               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.064         41.602               
+clock uncertainty                       0.000         41.602               
+clock pessimism                         0.000         41.602               
+--------------------------------------------------------------------  ---------------
+Required                                              41.602               
+--------------------------------------------------------------------  ---------------
+Slack                                                 40.996               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+
+

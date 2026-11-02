@@ -1,0 +1,65 @@
+standard
+***Report Model: top_eg4d_slave Device: EG4D20EG176***
+
+IO Statistics
+#IO                        40
+  #input                    8
+  #output                  23
+  #inout                    9
+
+Gate Statistics
+#Basic gates             5529
+  #and                    630
+  #nand                     0
+  #or                     339
+  #nor                      0
+  #xor                    281
+  #xnor                     0
+  #buf                      0
+  #not                    605
+  #bufif1                   9
+  #MX21                  1213
+  #FADD                     0
+  #DFF                   2452
+  #LATCH                    0
+#MACRO_ADD                157
+#MACRO_EQ                 209
+#MACRO_MUX               2344
+#MACRO_OTHERS              21
+
+Report Hierarchy Area:
++----------------------------------------------------------------------------------------+
+|Instance                              |Module                   |gates  |seq    |macros |
++----------------------------------------------------------------------------------------+
+|top                                   |top_eg4d_slave           |3077   |2452   |387    |
+|  u_aud_fifo                          |aud_pcm_fifo             |17     |44     |8      |
+|  u_aud_i2s                           |aud_i2s_tx               |13     |44     |11     |
+|  u_aud_player                        |aud_wav_player           |798    |644    |87     |
+|  u_aud_tf                            |tf_card_ctrl             |518    |219    |44     |
+|    u_buf                             |tf_sector_buf            |9      |0      |2      |
+|    u_spi                             |tf_spi_master            |33     |36     |4      |
+|  u_aud_tone                          |aud_tone                 |42     |51     |9      |
+|  u_key_scan                          |ctl_key_matrix_scan      |185    |78     |12     |
+|  u_key_tx                            |ctl_key_state_tx         |67     |82     |9      |
+|  u_mdio_diag                         |ctl_mdio_strap_read      |127    |109    |18     |
+|  u_mode_pll                          |PLL_75                   |0      |0      |1      |
+|  u_network_scheduler                 |ctl_gmii_tx_scheduler3   |19     |7      |2      |
+|  u_ocr_packet_link                   |ctl_lpr_packet_link      |465    |341    |55     |
+|  u_plate_cycle_dispatch              |ctl_plate_cycle_dispatch |276    |113    |16     |
+|  u_pll                               |PLL_0                    |0      |0      |1      |
+|  u_rgmii                             |rgmii_interface          |11     |0      |11     |
+|    ctl_output                        |ODDR                     |0      |0      |1      |
+|    rgmii_rx_ctl_in                   |IDDR                     |0      |0      |1      |
+|    rgmii_txc_ddr                     |ODDR                     |0      |0      |1      |
+|    rxdata_in_bus[0]$rgmii_rx_data_in |IDDR                     |0      |0      |1      |
+|    rxdata_in_bus[1]$rgmii_rx_data_in |IDDR                     |0      |0      |1      |
+|    rxdata_in_bus[2]$rgmii_rx_data_in |IDDR                     |0      |0      |1      |
+|    rxdata_in_bus[3]$rgmii_rx_data_in |IDDR                     |0      |0      |1      |
+|    txdata_out_bus[0]$rgmii_txd_out   |ODDR                     |0      |0      |1      |
+|    txdata_out_bus[1]$rgmii_txd_out   |ODDR                     |0      |0      |1      |
+|    txdata_out_bus[2]$rgmii_txd_out   |ODDR                     |0      |0      |1      |
+|    txdata_out_bus[3]$rgmii_txd_out   |ODDR                     |0      |0      |1      |
+|  u_rx_pll                            |eg4d_eth_rx_pll          |0      |0      |1      |
+|  u_telemetry_rx                      |ctl_telemetry_rx         |198    |392    |53     |
+|  u_telemetry_seg                     |dsp_telemetry_seg        |110    |230    |29     |
++----------------------------------------------------------------------------------------+

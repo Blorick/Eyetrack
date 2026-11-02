@@ -1,0 +1,132 @@
+standard
+***Report Model: top_eg4d_slave Device: EG4D20EG176***
+
+IO Statistics
+#IO                        40   out of    130   30.77%
+  #input                    8
+  #output                  23
+  #inout                    9
+
+Utilization Statistics
+#lut                     5921   out of  19600   30.21%
+#reg                     2537   out of  19600   12.94%
+#le                      5921
+  #lut only              3384   out of   5921   57.15%
+  #reg only                 0   out of   5921    0.00%
+  #lut&reg               2537   out of   5921   42.85%
+#bram                       4   out of     64    6.25%
+  #bram9k                   4
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#dsp                        0   out of     29    0.00%
+#pad                       40   out of    130   30.77%
+  #ireg                    14
+  #oreg                    16
+  #treg                     1
+#pll                        3   out of      4   75.00%
+#gclk                       4   out of     16   25.00%
+
+
+Detailed IO Report
+
+      Name         Direction    Location    IOStandard    IOType    DriveStrength    PullType     PackReg   
+    I_clk_25m        INPUT        P157       LVCMOS33      PAD           N/A          PULLUP       NONE     
+  I_eth_rx_ctl       INPUT        P158       LVCMOS33      PAD           N/A           NONE        DDRX1    
+    I_eth_rxc        INPUT        P159       LVCMOS33      PAD           N/A           NONE        NONE     
+  I_eth_rxd[3]       INPUT        P147       LVCMOS33      PAD           N/A           NONE        DDRX1    
+  I_eth_rxd[2]       INPUT        P148       LVCMOS33      PAD           N/A           NONE        DDRX1    
+  I_eth_rxd[1]       INPUT        P149       LVCMOS33      PAD           N/A           NONE        DDRX1    
+  I_eth_rxd[0]       INPUT        P150       LVCMOS33      PAD           N/A           NONE        DDRX1    
+    I_tf_miso        INPUT        P19        LVCMOS25      PAD           N/A          PULLUP       IREG     
+   O_aud_bclk       OUTPUT        P37        LVCMOS25      PAD            8            NONE        OREG     
+    O_aud_din       OUTPUT        P22        LVCMOS25      PAD            8            NONE        OREG     
+   O_aud_gain       OUTPUT        P26        LVCMOS25      PAD            8            NONE        NONE     
+   O_aud_lrclk      OUTPUT        P31        LVCMOS25      PAD            8            NONE        OREG     
+    O_aud_sd        OUTPUT        P28        LVCMOS25      PAD            8            NONE        NONE     
+    O_eth_mdc       OUTPUT        P133       LVCMOS33      PAD            8            NONE        OREG     
+   O_eth_rst_n      OUTPUT        P62        LVCMOS33      PAD            8           PULLUP       NONE     
+  O_eth_tx_ctl      OUTPUT        P145       LVCMOS33      PAD            8            NONE        DDRX1    
+    O_eth_txc       OUTPUT        P146       LVCMOS33      PAD            8            NONE        DDRX1    
+  O_eth_txd[3]      OUTPUT        P138       LVCMOS33      PAD            8            NONE        DDRX1    
+  O_eth_txd[2]      OUTPUT        P141       LVCMOS33      PAD            8            NONE        DDRX1    
+  O_eth_txd[1]      OUTPUT        P143       LVCMOS33      PAD            8            NONE        DDRX1    
+  O_eth_txd[0]      OUTPUT        P144       LVCMOS33      PAD            8            NONE        DDRX1    
+    O_led[3]        OUTPUT        P93        LVCMOS25      PAD            8            NONE        NONE     
+    O_led[2]        OUTPUT        P94        LVCMOS25      PAD            8            NONE        NONE     
+    O_led[1]        OUTPUT        P90        LVCMOS25      PAD            8            NONE        NONE     
+    O_led[0]        OUTPUT        P89        LVCMOS25      PAD            8            NONE        NONE     
+   O_seg_data       OUTPUT        P176       LVCMOS33      PAD            8            NONE        OREG     
+   O_seg_latch      OUTPUT        P174       LVCMOS33      PAD            8            NONE        OREG     
+   O_seg_sclk       OUTPUT        P173       LVCMOS33      PAD            8            NONE        OREG     
+    O_tf_clk        OUTPUT        P25        LVCMOS25      PAD            8            NONE        OREG     
+    O_tf_cs_n       OUTPUT        P39        LVCMOS25      PAD            8           PULLUP       NONE     
+    O_tf_mosi       OUTPUT        P35        LVCMOS25      PAD            8           PULLUP       OREG     
+   IO_eth_mdio       INOUT        P136       LVCMOS33      PAD            8           PULLUP     OREG;TREG  
+  IO_key_col[3]      INOUT        P114       LVCMOS25      PAD            8           PULLUP       IREG     
+  IO_key_col[2]      INOUT        P115       LVCMOS25      PAD            8           PULLUP       IREG     
+  IO_key_col[1]      INOUT        P118       LVCMOS25      PAD            8           PULLUP       IREG     
+  IO_key_col[0]      INOUT        P119       LVCMOS25      PAD            8           PULLUP       IREG     
+  IO_key_row[3]      INOUT        P91        LVCMOS25      PAD            8           PULLUP       IREG     
+  IO_key_row[2]      INOUT        P104       LVCMOS25      PAD            8           PULLUP       IREG     
+  IO_key_row[1]      INOUT        P109       LVCMOS25      PAD            8           PULLUP       IREG     
+  IO_key_row[0]      INOUT        P112       LVCMOS25      PAD            8           PULLUP       IREG     
+
+Report Clock Domain Luts:
+
+--------------------------------------------------------------------------------------------------------------------------------
+  Index   |  Name                       |  Frequency   |  LUT As Logic   |  LUT As Shifter   |  LUT As Dram   |  BRAM   |  DSP
+--------------------------------------------------------------------------------------------------------------------------------
+  #1      |  eg4d_clk_25m               |  25MHz       |  2296           |  0                |  544           |  4      |  0
+  #2      |  u_pll/pll_inst.clkc[0]     |  125MHz      |  120            |  0                |  0             |  1      |  0
+  #3      |  u_rx_pll/pll_inst.clkc[1]  |  125MHz      |  172            |  0                |  0             |  1      |  0
+--------------------------------------------------------------------------------------------------------------------------------
+
+Clock Resource Statistics
+Index     ClockNet               Type               DriverType         Driver                       Fanout
+#1        I_clk_25m_dup_1        Global             io                 I_clk_25m_syn_2.di           1568
+#2        W_rx_pll_clock         Global             pll                u_rx_pll/pll_inst.clkc1      129
+#3        u_pll/clk0_buf         Global             pll                u_pll/pll_inst.clkc0         90
+#4        W_clk_tx_90            Global             pll                u_pll/pll_inst.clkc1         3
+#5        I_eth_rxc_dup_1        GeneralRouting     io                 I_eth_rxc_syn_2.di           1
+#6        u_mode_pll/clk0_buf    Global             pll                u_mode_pll/pll_inst.clkc0    0
+#7        u_rx_pll/clk0_buf      Global             pll                u_rx_pll/pll_inst.clkc0      0
+
+Report Hierarchy Area:
++---------------------------------------------------------------------------------------------------------+
+|Instance                 |Module                   |le      |lut     |ripple  |seq     |bram    |dsp     |
++---------------------------------------------------------------------------------------------------------+
+|top                      |top_eg4d_slave           |5921    |5314    |607     |2568    |4       |0       |
+|  u_aud_fifo             |aud_pcm_fifo             |1319    |1297    |22      |132     |0       |0       |
+|  u_aud_i2s              |aud_i2s_tx               |74      |62      |12      |37      |0       |0       |
+|  u_aud_player           |aud_wav_player           |1353    |1120    |233     |633     |0       |0       |
+|  u_aud_tf               |tf_card_ctrl             |600     |534     |66      |235     |2       |0       |
+|    u_buf                |tf_sector_buf            |10      |10      |0       |1       |2       |0       |
+|    u_spi                |tf_spi_master            |131     |127     |4       |44      |0       |0       |
+|  u_aud_tone             |aud_tone                 |134     |106     |28      |52      |0       |0       |
+|  u_key_scan             |ctl_key_matrix_scan      |168     |153     |15      |72      |0       |0       |
+|  u_key_tx               |ctl_key_state_tx         |120     |108     |12      |77      |0       |0       |
+|  u_mdio_diag            |ctl_mdio_strap_read      |204     |176     |28      |109     |0       |0       |
+|  u_mode_pll             |PLL_75                   |0       |0       |0       |0       |0       |0       |
+|  u_network_scheduler    |ctl_gmii_tx_scheduler3   |83      |83      |0       |27      |0       |0       |
+|  u_ocr_packet_link      |ctl_lpr_packet_link      |569     |497     |72      |328     |2       |0       |
+|  u_plate_cycle_dispatch |ctl_plate_cycle_dispatch |403     |338     |65      |148     |0       |0       |
+|  u_pll                  |PLL_0                    |0       |0       |0       |0       |0       |0       |
+|  u_rgmii                |rgmii_interface          |4       |4       |0       |1       |0       |0       |
+|  u_rx_pll               |eg4d_eth_rx_pll          |1       |1       |0       |0       |0       |0       |
+|  u_telemetry_rx         |ctl_telemetry_rx         |369     |365     |4       |363     |0       |0       |
+|  u_telemetry_seg        |dsp_telemetry_seg        |359     |326     |33      |229     |0       |0       |
++---------------------------------------------------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout     Nets  
+    #1          1       4506  
+    #2          2       2284  
+    #3          3       353   
+    #4          4       308   
+    #5        5-10      517   
+    #6        11-50     293   
+    #7       51-100      50   
+    #8       101-500     4    
+  Average     3.05            

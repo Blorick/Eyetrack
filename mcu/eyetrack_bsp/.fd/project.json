@@ -1,0 +1,11 @@
+{
+    "arch": "rv32",
+    "chip": "ph1p35",
+    "hpfFile": "D:/Project/Anlogic/push/Eyetrack/mcu/eyetrack_bsp/Eyetrack.hpf",
+    "location": "D:/Project/Anlogic/push/Eyetrack/mcu/eyetrack_bsp",
+    "name": "eyetrack_bsp",
+    "os": "standalone",
+    "processor": "rpu",
+    "toolVersion": "862c784 (2026-09-02-16:28)",
+    "type": "platform"
+}

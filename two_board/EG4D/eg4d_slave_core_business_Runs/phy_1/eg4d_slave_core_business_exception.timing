@@ -1,0 +1,70 @@
+Created by          : Tang Dynasty v6.2.168116
+                    : Copyright (c) 2012-2025 Anlogic Inc.
+Generated           : Sat Oct 31 00:22:31 2026
+
+Top Model           : top_eg4d_slave
+Device              : EG4D20EG176
+Speed               : NA
+STA coverage        : 99.89%
+Constraint File     : D:/Project/Anlogic/push/Eyetrack/two_board/EG4D/constr/eg4d_business_cdc.sdc;D:/Project/Anlogic/push/Eyetrack/two_board/EG4D/constr/eg4d_c13_c14.sdc;
+Confidence          : Routed
+Check Corner        : Both (Slow and Fast)
+CRPR Enabled        : Yes
+Report Scheme       : 10 end point(s) per path group, 1 path(s) per end point
+
+
+Check Status
+-------------
+
+Corner   | Max      Min     
+------------------------------------
+Slow     | yes      yes     
+Fast     | yes      yes     
+
+MCP/SMD Summary
+--------------------
+
+		Max Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+		         0            0            0            0   set_max_delay -datapath_only -from [get_clocks {eg4d_mode_75m}] -to [get_clocks {u_pll/pll_inst.clkc[0]}] 8.000
+		         0            0            0            0   set_max_delay -datapath_only -from [get_clocks {u_pll/pll_inst.clkc[0]}] -to [get_clocks {eg4d_mode_75m}] 13.333
+		         0            0            0            0   set_max_delay -datapath_only -from [get_clocks {eg4d_eth_rxc u_rx_pll/pll_inst.clkc[0] u_rx_pll/pll_inst.clkc[1]}] -to [get_clocks {eg4d_mode_75m}] 13.333
+
+		Min Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+
+Status of timing exceptions
+--------------------------------------------------
+
+MCP/SMD Details
+--------------------
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_clocks {eg4d_mode_75m}] -to [get_clocks {u_pll/pll_inst.clkc[0]}] 8.000
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            0
+Dominated      :            0,    -nan(ind)%
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_clocks {u_pll/pll_inst.clkc[0]}] -to [get_clocks {eg4d_mode_75m}] 13.333
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            0
+Dominated      :            0,    -nan(ind)%
+
+
+Constraint     :   set_max_delay -datapath_only -from [get_clocks {eg4d_eth_rxc u_rx_pll/pll_inst.clkc[0] u_rx_pll/pll_inst.clkc[1]}] -to [get_clocks {eg4d_mode_75m}] 13.333
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :            0
+Dominated      :            0,    -nan(ind)%
+
+
+Details on timing exceptions
+--------------------------------------------------
+
+
+

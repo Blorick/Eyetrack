@@ -1,0 +1,57 @@
+standard
+***Report Model: top_eg4d_slave Device: EG4D20EG176***
+
+IO Statistics
+#IO                        40   out of    130   30.77%
+  #input                    8
+  #output                  23
+  #inout                    9
+
+LUT Statistics
+#Total_luts              3663
+  #lut4                  3263
+  #lut5                   400
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b               0
+
+Utilization Statistics
+#lut                     5693   out of  19600   29.05%
+#reg                     2437   out of  19600   12.43%
+#bram                       4   out of     64    6.25%
+  #bram9k                   4
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#dsp                        0   out of     29    0.00%
+#pad                       40   out of    130   30.77%
+  #ireg                    14
+  #oreg                    16
+  #treg                     1
+#pll                        3   out of      4   75.00%
+#gclk                       4   out of     16   25.00%
+
+Report Hierarchy Area:
++------------------------------------------------------------------------------------------------+
+|Instance                 |Module                   |lut     |ripple  |seq     |bram    |dsp     |
++------------------------------------------------------------------------------------------------+
+|top                      |top_eg4d_slave           |5086    |607     |2468    |4       |0       |
+|  u_aud_fifo             |aud_pcm_fifo             |1220    |22      |44      |0       |0       |
+|  u_aud_i2s              |aud_i2s_tx               |50      |12      |42      |0       |0       |
+|  u_aud_player           |aud_wav_player           |1090    |233     |640     |0       |0       |
+|  u_aud_tf               |tf_card_ctrl             |523     |66      |216     |2       |0       |
+|    u_buf                |tf_sector_buf            |9       |0       |0       |2       |0       |
+|    u_spi                |tf_spi_master            |122     |4       |33      |0       |0       |
+|  u_aud_tone             |aud_tone                 |105     |28      |51      |0       |0       |
+|  u_key_scan             |ctl_key_matrix_scan      |151     |15      |78      |0       |0       |
+|  u_key_tx               |ctl_key_state_tx         |112     |12      |82      |0       |0       |
+|  u_mdio_diag            |ctl_mdio_strap_read      |172     |28      |106     |0       |0       |
+|  u_mode_pll             |PLL_75                   |0       |0       |0       |0       |0       |
+|  u_network_scheduler    |ctl_gmii_tx_scheduler3   |75      |0       |7       |0       |0       |
+|  u_ocr_packet_link      |ctl_lpr_packet_link      |484     |72      |341     |2       |0       |
+|  u_plate_cycle_dispatch |ctl_plate_cycle_dispatch |363     |65      |113     |0       |0       |
+|  u_pll                  |PLL_0                    |0       |0       |0       |0       |0       |
+|  u_rgmii                |rgmii_interface          |3       |0       |0       |0       |0       |
+|  u_rx_pll               |eg4d_eth_rx_pll          |1       |0       |0       |0       |0       |
+|  u_telemetry_rx         |ctl_telemetry_rx         |248     |4       |392     |0       |0       |
+|  u_telemetry_seg        |dsp_telemetry_seg        |341     |33      |227     |0       |0       |
++------------------------------------------------------------------------------------------------+

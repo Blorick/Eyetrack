@@ -1,0 +1,95 @@
+# ============================================================================
+# EG4D20EG176 pin plan -- two_board compute slave (top_eg4d_slave)
+# ----------------------------------------------------------------------------
+# Board      : 米联客 MLK-S200 (device EG4D20LG176 / package EG4D20EG176)
+# Sources    : 9_康芯开发板使用手册及实验平台/MLK-S200开发平台硬件使用手册.pdf
+#              (FPGA 单端时钟表 p9; FPGA ETH 以太网芯片引脚分配表 p11;
+#               FPGA LED 输入引脚分配表 p18)
+#              MLK_S200_260402.pdf schematic, sheet P07 ETHA (ball 62)
+#
+# WHY THIS FILE IS REGISTERED IN EG4D_C13_C14.al:
+#   The previous physical run had `set ADCList {}` in the run settings because
+#   this .adc was not part of the project constraint set.  TD therefore placed
+#   every port on a default pad with the default LVCMOS25 standard and bitgen
+#   aborted with:
+#       BIT-8123 ERROR: Bitgen is prohibitted as there is(are) unconstrained io(s) in design.
+#   (EG4D/EG4D_C13_C14_Runs/phy_1/run.log line 1311, run.logw line 12)
+#   The file must stay listed under <ADC_FILE> in EG4D_C13_C14.al, otherwise
+#   TD regenerates a settings.cfg with an empty ADCList and the failure returns.
+#
+# Every port of top_eg4d_slave is covered here: 40 pads in total
+# (1 clock in + 19 RGMII/LED/MDIO + 8 key-matrix + 4 TF-card + 5 audio + 3 display).
+# W3 adds the key matrix, TF card and MAX98357A I2S pins from v2.6.
+# ============================================================================
+
+# --- MLK-S200 p9: "B7_T5_157 输入 157 LVCMOS33 时钟输入" (25 MHz single-ended) ---
+set_pin_assignment { I_clk_25m }   { LOCATION = P157; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+
+# --- MLK-S200 p18: LED1=89 LED2=90 LED3=94 LED4=93, IOSTANDARD LVCMOS25 ---
+set_pin_assignment { O_led[0] }     { LOCATION = P89;  IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_led[1] }     { LOCATION = P90;  IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_led[2] }     { LOCATION = P94;  IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_led[3] }     { LOCATION = P93;  IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+
+# --- MLK-S200 p11: ETHA (YT8531DC-CA) RGMII, all LVCMOS33 ---
+#   ETHA_TXCK  146 | ETHA_TXD0 144 | ETHA_TXD1 143 | ETHA_TXD2 141
+#   ETHA_TXD3  138 | ETHA_TXCTL 145
+#   ETHA_RXCK  159 | ETHA_RXD0 150 | ETHA_RXD1 149 | ETHA_RXD2 148
+#   ETHA_RXD3  147 | ETHA_RXCTL 158 | ETHA_MDC 133 | ETHA_MDIO 136
+#   ball 62 (B4_BE1_N_62) is the ETHA reset entry of the same table and is
+#   wired on schematic sheet P07 to the PHY RESET_N.
+set_pin_assignment { O_eth_txc }    { LOCATION = P146; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_eth_txd[0] } { LOCATION = P144; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_eth_txd[1] } { LOCATION = P143; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_eth_txd[2] } { LOCATION = P141; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_eth_txd[3] } { LOCATION = P138; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_eth_tx_ctl } { LOCATION = P145; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { I_eth_rxc }    { LOCATION = P159; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { I_eth_rxd[0] } { LOCATION = P150; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { I_eth_rxd[1] } { LOCATION = P149; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { I_eth_rxd[2] } { LOCATION = P148; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { I_eth_rxd[3] } { LOCATION = P147; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { I_eth_rx_ctl } { LOCATION = P158; IOSTANDARD = LVCMOS33; PULLTYPE = NONE; }
+set_pin_assignment { O_eth_mdc }    { LOCATION = P133; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { IO_eth_mdio }  { LOCATION = P136; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { O_eth_rst_n }  { LOCATION = P62;  IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+
+# --- MLK-S200 4x4 matrix: full schematic and official key ADC ---
+# KEY1-4 row is P112; the manual table's P122 entry is a printing error.
+# Both groups are bidirectional and carry FPGA weak pull-ups: the scanner
+# alternately drives one group low and senses the other, which removes the
+# unknown drive/sense direction from the board manual.
+set_pin_assignment { IO_key_row[0] } { LOCATION = P112; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { IO_key_row[1] } { LOCATION = P109; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { IO_key_row[2] } { LOCATION = P104; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { IO_key_row[3] } { LOCATION = P91;  IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { IO_key_col[0] } { LOCATION = P119; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { IO_key_col[1] } { LOCATION = P118; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { IO_key_col[2] } { LOCATION = P115; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { IO_key_col[3] } { LOCATION = P114; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+
+# --- v2.6: TF card socket (MLK-S200 hardware manual p15, all LVCMOS25) ---
+# Manual: TF1_CLK 25 | TF1_CMD 35 | TF1_DAT3 39 | TF1_DAT0 19
+# SPI mode: CLK=clock, CMD=MOSI, DAT3=CS_N, DAT0=MISO.
+set_pin_assignment { O_tf_clk }  { LOCATION = P25; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_tf_cs_n } { LOCATION = P39; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { O_tf_mosi } { LOCATION = P35; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = PULLUP; }
+set_pin_assignment { I_tf_miso } { LOCATION = P19; IOSTANDARD = LVCMOS25; PULLTYPE = PULLUP; }
+
+# --- v2.6: MAX98357A I2S mono amplifier on the GPIO header (manual p16-17) ---
+# GPIO header pin 3  = P37 : I2S BCLK   (25 MHz / 8  = 3.125 MHz)
+# GPIO header pin 5  = P31 : I2S LRCLK  (BCLK / 64   = 48 828.125 Hz)
+# GPIO header pin 7  = P22 : I2S DIN
+# GPIO header pin 9  = P28 : amplifier SD_MODE (enable while playing)
+# GPIO header pin 11 = P26 : amplifier GAIN strap (static level)
+set_pin_assignment { O_aud_bclk }  { LOCATION = P37; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_aud_lrclk } { LOCATION = P31; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_aud_din }   { LOCATION = P22; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_aud_sd }    { LOCATION = P28; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_aud_gain }  { LOCATION = P26; IOSTANDARD = LVCMOS25; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+
+# --- MLK-S200 hardware manual printed p12: onboard cascaded 74HC595 ---
+# 595sfclk=173, 595lach=174, 595data=176; all LVCMOS33.
+set_pin_assignment { O_seg_sclk }  { LOCATION = P173; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_seg_latch } { LOCATION = P174; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { O_seg_data }  { LOCATION = P176; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
